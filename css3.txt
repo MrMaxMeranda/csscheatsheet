@@ -1,0 +1,907 @@
+BACKGROUND
+
+background*		background-image
+                        background-position
+                        background-size
+                        background-repeat
+                        background-attachment
+                        background-origin
+                        background-clip
+                        background-color
+background-attachment   scroll | fixed
+background-break        bounding-box | each-box |
+                        continuous
+background-clip         <length>
+                        <percent>
+                        border-box | padding-box |
+                        content-box | no-clip
+background-color        <color>
+                        transparent
+background-image        <url>
+                        none
+background-origin       border-box | padding-box |
+                        content-box
+background-position     top left | top center | top
+                        right | center left | center
+                        center | center right |
+                        bottom left | bottom center
+                        | bottom right
+                        <x-percent> <y-percent>
+                        <x-pos> <y-pos>
+background-repeat       repeat | repeat-x | repeat-y |
+			no-repeat
+background-size         <length>
+                        <percent>
+                        auto | cover | contain
+
+BORDER
+
+border            	border-width
+                        border-style
+                        border-color
+border-bottom*          border-bottom-width
+                        border-style
+                        border-color
+border-bottom-color     border-color
+border-bottom-style     border-style
+border-bottom-width     thin | medium | thick
+                        <length>
+border-collapse         collapse | separate
+border-color            <color>
+border-image            <image>
+                        [ <number> / <percent>
+                        border-width
+                        stretch | repeat | round ]
+                        none
+border-left*            border-left-width
+                        border-style
+                        border-color
+border-left-color       border-color
+border-left-style       border-style
+border-left-width       thin | medium | thick
+                        <length>
+border-right*           border-right-width
+                        border-style
+                        border-color
+border-right-color      border-color
+border-right-style      border-style
+border-right-width      thin | medium | thick
+                        <length>
+border-top*             border-top-width
+                        border-style
+                        border-color
+border-top-color        border-color
+border-top-style        border-style
+border-top-width        thin | medium | thick
+                        <length>
+border-width*           thin | medium | thick
+                        <length>
+border-radius*          border-top-right-radius
+                        border-bottom-right-radius
+                        border-bottom-left-radius
+                        border-top-left-radius
+border-top-right-radius <length>
+border-bottom-right-radius <length>
+border-bottom-left-radius <length>
+border-top-left-radius  <length>
+box-shadow              inset || [ <length>, <length>,
+                        <length>, <length> || <color> ]
+                        none
+border-style            none | hidden | dotted |
+                        dashed | solid | double |
+                        groove | ridge | inset |
+                        outset
+FONT
+
+font*                   font-style
+                        font-variant
+                        font-weight
+                        font-size/line-height
+                        font-family
+                        caption | icon | menu |
+                        message-box | small-caption |
+			status-bar
+font-family             family-name
+                        generic-family
+                        inherit
+font-size               xx-small | x-small | small |
+                        medium | large | x-large |
+                        xx-large | smaller | larger |
+                        inherit
+                        <length>
+                        <percent>
+font-size-adjust        none| inherit
+                        number
+font-stretch            normal | wider | narrower |
+                        ultra-condensed |
+			extra-condensed | condensed |
+                        semi-condensed | semi-expanded |
+			expanded | extra-expanded |
+			ultra-expanded | inherit
+font-style              normal | italic | oblique |
+                        inherit
+font-variant            normal | small-caps | inherit
+font-weight             normal | bold | bolder |
+                        lighter | 100 | 200 | 300 |
+                        400 | 500 | 600 | 700 | 800
+                        | 900 | inherit
+BOX MODEL
+
+clear                   left | right | both | none
+display                 none | inline | block |
+			inline-block | list-item |
+			run-in | compact | table |
+			inline-table | table-row-group |
+                        table-header-group |
+			table-footer-group | table-row |
+                        table-column-group | table-column |
+			table-cell | table-caption |
+			ruby | ruby-base | ruby-text |
+			ruby-base-group | ruby-text-group
+			---
+        		block
+			---
+float                   left | right | none
+height                  auto
+                        <length>
+                        <percent>
+max-height              none
+                        <length>
+                        <percent>
+max-width               none
+                        <length>
+                        <percent>
+min-height              none | inherit
+                        <length>
+                        <percent>
+min-width               none | inherit
+                        <length>
+                        <percent>
+width                   auto
+                        <percent>
+                        <length>
+margin*                 margin-top
+                        margin-right
+                        margin-bottom
+                        margin-left
+margin-bottom           auto
+                        <length>
+                        <percent>
+margin-left             auto
+                        <length>
+                        <percent>
+margin-right            auto
+                        <length>
+                        <percent>
+margin-top              auto
+                        <length>
+                        <percent>
+padding*                padding-top
+                        padding-right
+                        padding-bottom
+                        padding-left
+padding-bottom          <length>
+                        <percent>
+padding-left            <length>
+                        <percent>
+padding-right           <length>
+                        <percent>
+padding-top             <length>
+                        <percent>
+marquee-direction       forward | reverse
+marquee-loop            infinite
+                        number
+marquee-play-count      infinite
+                        integer
+marquee-speed           slow | normal | fast
+marquee-style           scroll | slide | alternate
+overflow*               visible | hidden | scroll |
+                        auto | no-display | no-content
+                        overflow-x
+                        overflow-y
+overflow-style          auto | marquee-line |
+			marquee-block
+overflow-x              visible | hidden | scroll |
+                        auto | no-display | no-content
+overflow-y              visible | hidden | scroll |
+                        auto | no-display | no-content
+rotation                angle
+rotation-point          position (paired value offset)
+visibility              visible | hidden | collapse
+
+TEXT
+
+direction               ltr | rtl | inherit
+hanging-punctuation     none | [ start | end | end-edge ]
+letter-spacing          normal
+                        <length>
+                        <percent>
+punctuation-trim        none | [start | end | adjacent]
+text-align              start | end | left | right |
+                        center | justify
+text-align-last         start | end | left | right |
+                        center | justify
+text-decoration         none | underline | overline |
+                        line-through | blink
+text-emphasis           none | [ [ accent | dot | circle
+                        | disc] [ before | after ]? ]
+text-indent             <length>
+                        <percent>
+text-justify            auto | inter-word |
+			inter-ideograph | inter-cluster |
+                        distribute | kashida | tibetan
+text-outline            none
+                        <color>
+                        <length>
+text-shadow             none
+                        <color>
+                        <length>
+text-transform          none | capitalize | uppercase
+                        | lowercase
+text-wrap               normal | unrestricted | none
+                        | suppress
+unicode-bidi            normal | embed | bidi-override
+white-space             normal | pre | nowrap |
+			pre-wrap | pre-line
+white-space-collapse    preserve | collapse |
+			preserve-breaks | discard
+word-break              normal | keep-all | loose |
+                        break-strict | break-all
+word-spacing            normal
+                        <length>
+                        <percent>
+word-wrap               normal | break-word
+
+
+TEMPLATE LAYOUT
+
+box-align               start | end | center | base-
+box-direction           normal | reverse
+box-flex                number
+box-flex-group          integer
+box-lines               single | multiple
+box-orient              horizontal | vertical |
+			inline-axis | block-axis
+box-pack                start | end | center | justify
+box-sizing              content-box | padding-box |
+                        border-box | margin-box
+tab-side                top | bottom | left | right
+
+TABLE
+
+border-collapse         collapse | separate
+border-spacing          <length> <length>
+caption-side            top | bottom | left | right
+empty-cells             show | hide
+table-layout            auto | fixed
+
+
+SPEECH
+
+cue*                    cue-before
+                        cue-after
+cue-before              uri [ silent | x-soft | soft |
+                        medium | loud | x-loud] |
+                        none | inherit ]
+                        number
+                        <percent>
+cue-after               uri [ silent | x-soft | soft |
+                        medium | loud | x-loud] |
+                        none | inherit ]
+                        number
+                        <percent>
+mark*                   mark-before
+                        mark-after
+mark-before             string
+mark-after              string
+
+pause*                  pause-before
+                        pause-after
+pause-before            none | x-weak | weak |
+                        medium | strong | x-strong
+                        | inherit
+                        time
+pause-after             none | x-weak | weak |
+                        medium | strong | x-strong
+                        | inherit
+                        time
+phonemes                string
+rest*                   rest-before
+                        rest-after
+rest-before             none | x-weak | weak |
+                        medium | strong | x-strong
+                        | inherit
+                        time
+rest-after              none | x-weak | weak |
+                        medium | strong | x-strong
+                        | inherit
+                        time
+speak                   none | normal | spell-out |
+                        digits | literal-punctuation |
+                        no-punctuation | inherit
+voice-balance           left | center | right |
+			leftwards | rightwards | inherit
+                        number
+voice-duration          time
+voice-family            inherit | [ <specific-voice,
+                        age, generic-voice, number> ]
+voice-rate              x-slow | slow | medium |
+                        fast | x-fast | inherit
+                        <percent>
+voice-pitch             x-low | low | medium | high
+                        | x-high | inherit
+                        number
+                        <percent>
+voice-pitch-range       x-low | low | medium | high
+                        | x-high | inherit
+                        number
+voice-stress            strong | moderate | none |
+                        reduced | inherit
+voice-volume            silent | x-soft | soft |
+			medium | loud | x-loud | inherit
+                        number
+                        <percent>
+
+COLUMN
+
+column-count            auto
+                        number
+column-fill             auto | balance
+column-gap              normal
+                        <length>
+column-rule*            column-rule-width
+                        column-rule-style
+                        column-rule-color
+column-rule-color       <color>
+column-rule-style       border-style
+column-rule-width       thin | medium | thick
+                        <length>
+columns*                column-width
+                        column-count
+column-span             1 | all
+column-width            auto
+                        <length>
+
+COLOR
+
+color                   inherit
+                        <color>
+opacity                 inherit
+                        number
+
+LIST & MARKERS
+
+list-style              list-style-type
+                        list-style-position
+                        list-style-image
+list-style-image        none
+                        <url>
+list-style-position     Inside | outside
+list-style-type         none | asterisks | box |
+                        check | circle | diamond |
+                        disc | hyphen | square |
+                        decimal | decimal-leadingzero |
+			lower-roman | upperroman |
+			lower-alpha | upper-alpha |
+			lower-greek | lower-latin |
+			upper-latin | hebrew | armenian |
+			georgian | cjk-ideographic |
+			hiragana | katakana |
+			hiragana-iroha | katakana-iroha |
+			footnotes
+marker-offset           auto
+                        <length>
+
+ANIMATIONS
+
+animation*              animation-name
+                        animation-duration
+                        animation-timing-function
+                        animation-delay
+                        animation-iteration-count
+                        animation-direction
+animation-delay         time
+animation-direction     normal | alternate
+animation-duration      time
+animation-iteration-count inherit
+                          number
+animation-name          none | IDENT
+animation-play-state    running | paused
+animation-timing-function ease | linear | ease-in |
+                          ease-out | ease-in-out |
+                          cubic-Bezier (number, number,
+			  number, number)
+
+TRANSITIONS
+
+transition*             transition-property
+                        transition-duration
+                        transition-timing-function
+                        transition-delay
+transition-delay        time
+transition-duration     time
+transition-property     none | all
+transition-timing-function ease | linear | ease-in |
+                           ease-out | ease-in-out |
+                           cubic-Bezier (number, number,
+			   number, number)
+
+GRID POSITIONING
+
+grid-columns            none | inherit
+                        [ <length> percentage relative
+                        <length> ]
+grid-rows               none | inherit
+                        [ <length> percentage relative
+                        <length> ]
+
+OUTLINE
+
+outline*                outline-color
+                        outline-style
+                        outline-width
+outline-color           <color>
+                        invert
+outline-offset          inherit
+                        <length>
+outline-style           None | dotted | dashed |
+                        solid | double | groove |
+                        ridge | inset | outset
+outline-width           thin | medium | thick
+                        <length>
+
+3D / 2D TRANSFORM
+
+backface-visibility     visible | hidden
+perspective             none
+                        number
+perspective-origin      [ [ [ percentage> |
+                        <length> | left | center |
+                        right ] [ <percentage> |
+                        <length> | top | center |
+                        bottom ]? ] <length> ] |
+                        [ [ [ left | center | right ] ||
+                        [ top | center | bottom ] ]
+                        <length> ]
+transform               none | matrix | matrix3d |
+                        translate3d | translateX |
+                        translateY | translateZ |
+                        scale | scale3d | scaleX |
+                        scaleY | scaleZ | rotate |
+                        rotate3d | rotateX | rotateY
+                        | rotateZ | skewX | skewY |
+                        skew | perspective
+transform-origin        [ [ [ <percentage> |
+                        <length> | left | center |
+                        right ] [ <percentage> |
+                        <length> | top | center |
+                        bottom ]? ] <length> ] |
+                        [ [ [ left | center | right ] ||
+                        [ top | center | bottom ] ]
+                        <length> ]
+transform-style         flat | preserve-3d
+
+GENERATED CONTENT
+
+bookmark-label          content
+                        attr
+                        string
+bookmark-level          none
+                        integer
+bookmark-target         self
+                        uri
+                        attr
+border-length           auto
+                        <length>
+content                 normal | none | inhibit
+                        uri
+counter-increment       none
+                        identifier number
+counter-reset           none
+                        identifier number
+crop                    auto
+                        shape
+display                 normal | none | list-item
+float-offset            <length> <length>
+hyphenate-after         auto
+                        integer
+hyphenate-before        auto
+                        integer
+hyphenate-character     auto
+                        string
+hyphenate-lines         no-limit
+                        integer
+hyphenate-resource      none
+			uri
+hyphens                 none | manual | auto
+image-resolution        normal | auto
+                        dpi
+marks                   [ crop || cross ] | none
+move-to                 normal | here
+                        identifier
+page-policy             start | first | last
+quotes                  none
+                        string string string string
+string-set              identifier
+                        content-list
+text-replace            none
+                        [<string> <string>]+
+
+LINE BOX
+
+alignment-adjust        auto | baseline | before-edge |
+			text-before-edge | middle |
+			central | after-edge |
+			text-after-edge | ideographic |
+			alphabetic | hanging | mathematical
+                        <length>
+                        <percent>
+alignment-baseline      baseline | use-script |
+			before-edge | text-before-edge |
+			after-edge | text-after-edge |
+			central | middle | ideographic |
+			alphabetic | hanging
+			mathematical
+baseline-shift          baseline | sub | super
+                        <length>
+                        <percent>
+dominant-baseline       auto | use-script | no-change |
+			reset-size | alphabetic |
+			hanging | ideographic |
+			mathematical | central | middle |
+			text-after-edge | text-before-edge
+drop-initial-after-align alignment-baseline
+drop-initial-after-adjust central | middle | after-edge
+                          | text-after-edge |
+			  ideographic | alphabetic |
+                          mathematical
+                          <length>
+                          <percent>
+drop-initial-before-align caps-height
+                          alignment-baseline
+drop-initial-before-adjust before-edge | text-before-edge |
+			   central | middle |
+                           hanging | mathematical
+                           <length>
+                           <percent>
+drop-initial-value      initial
+                        integer
+drop-initial-size       auto
+                        integer
+                        <percent>
+                        line
+inline-box-align        initial | last
+                        integer
+line-height             normal
+                        number
+                        <length>
+                        <percent>
+line-stacking*          line-stacking-strategy
+                        line-stacking-ruby
+                        line-stacking-shift
+line-stacking-strategy  inline-line-height |
+			block-line-height | max-height |
+                        grid-height
+line-stacking-ruby      exclude-ruby | include-ruby
+line-stacking-shift     consider-shifts | disregard-shifts
+text-height             auto | font-size | text-size |
+                        max-size
+vertical-align          Baseline | sub | super | top
+                        | text-top | middle | bottom
+                        | text-bottom
+                        <length>
+                        <percent>
+
+HYPERLINK
+
+target                  target-name
+                        target-new
+                        target-position
+target-name             current | root | parent | new
+                        | modal
+                        string
+target-new              window | tab | none
+target-position         above | behind | front |
+                        back
+
+POSITIONING
+
+bottom                  auto
+                        <percent>
+                        <length>
+clip                    shape
+                        auto
+left                    auto
+                        <percent>
+                        <length>
+position                static | relative | absolute |
+                        fixed
+right                   auto
+                        <percent>
+                        <length>
+top                     auto
+                        <percent>
+                        <length>
+z-index                 auto
+                        number
+
+RUBY
+
+ruby-align              auto | start | left | center |
+                        end | right | distribute-letter
+                        | distribute-space | line-edge
+ruby-overhang           auto | start | end | none
+ruby-position           before | after | right | inline
+ruby-span               attr(x) | none
+
+PAGED MEDIA
+
+fit                     fill | hidden | meet | slice
+fit-position            [top | center | bottom] ||
+                        [left | center | right]
+                        <length>
+                        <percent>
+image-orientation       auto
+                        angle
+orphans                 integer
+page                    auto
+                        identifier
+page-break-after        auto | always | avoid | left |
+                        right
+page-break-before       auto | always | avoid | left |
+                        right
+page-break-inside       auto | avoid
+size                    auto | landscape | portrait
+                        <length>
+windows                 integer
+
+UI
+
+appearance              normal | inherit |
+			[icon | window | desktop |
+			workspace | document | tooltip |
+			dialog | button | push-button |
+			hyperlink | radio-button |
+			checkbox | menu-item | tab |
+			menu | menu-bar | pull-down-menu |
+			pop-up-menu | list-menu |
+			radio-group | checkbox-group |
+			outline-tree | range | field |
+			combo-box | signature | password]
+cursor                  auto | crosshair | default |
+			pointer | move | e-resize |
+			ne-resize | nw-resize | n-resize |
+			se-resize | sw-resize | s-resize |
+			w-resize | text | wait | help
+			<url>
+icon                    auto | inherit
+                        <url>
+nav-index               auto | inherit
+                        number
+nav-up                  auto | inherit
+                        <id> [ current | root |
+                        <target-name> ]
+nav-right               auto | inherit
+                        <id> [ current | root |
+                        <target-name> ]
+nav-down                auto | inherit
+                        <id> [ current | root |
+                        <target-name> ]
+nav-left                auto | inherit
+                        <id> [ current | root |
+                        <target-name> ]
+resize                  none | both | horizontal |
+                        vertical | inherit
+
+• Values in italics are place holders for an actual
+value (like 1px, 1em, 1%), values in normal text are
+values that can be used as the actual value
+
+• CSS Properties in Dark Red are shorthand properties
+and each value must be defined. The exception is where
+the property can define from one to four of the sides of
+a box element property
+(Top-Right-Bottom-Left) - i.e. border-width
+
+PSEUDO-CLASS
+
+:active                 an activated element
+:focus                  an element while the
+                        element has focus
+:visited                a visited link
+:hover                  an element when you mouse
+                        over it
+:link                   an unvisited link
+:disabled               an element while the
+                        element is disabled
+:enabled                an element while the
+                        element is enabled
+:checked                an element (form element
+                        control) that is checked
+:selection              an element that is currently
+                        selected of highlighted by
+                        the user
+:lang                   Allows the author to specify
+                        a language to use in a
+                        specified element
+                        an element that is the n-th
+                        sibling
+:nth-child(n)           an element that is the n-th
+                        sibling counting from the
+                        last sibling
+:nth-last-child(n)      an element that is the last
+                        sibling
+:first-child            an element that is the first
+                        sibling
+:last-child             an element that is the last
+                        child
+:only-child             an element that is the only
+                        child
+:nth-of-type(n)         an element that is the n-th
+                        sibling of its type.
+:nth-last-of-type(n)    an element that is the n-th
+                        sibling of its type counting
+                        from the last sibling
+:last-of-type           an element that is the last
+                        sibling of its type
+:first-of-type          an element that is the first
+                        sibling of its type
+:only-of-type           an element that is the only
+                        child of that type
+:empty                  an element that has no
+                        children
+:root                   root element within the
+                        document
+:not(x)                 an element not represented
+                        by the argument ‘x’
+:target                 a target element as specified
+                        by a target in a URI
+
+PSEUDO-ELEMENT
+
+::first-letter          Adds special style to the first
+                        letter of a text
+::first-line            Adds special style to the first
+                        line of a text
+::before                Inserts some content before
+                        an element
+::after                 Inserts some content after an
+                        element
+
+UNITS
+
+ABSOLUTE MEASUREMENT
+
+%                       percentage
+cm                      centimeter
+in                      inch
+mm                      millimeter
+pc                      pica (1p = 12 points)
+pt                      point (1pt = 1/72 inch)
+
+RELATIVE MEASUREMENT
+
+ch                      width of the "0" glyph found in
+                        the font for the font size used
+			to render
+em                      1em = current font size of
+                        current element
+ex                      x-height of the element's font
+gd                      the grid defined by 'layout-grid'
+px                      pixel of the viewing device
+rem                     the font size of the root element
+vh                      the viewport's height
+vw                      the viewport's width
+vm                      viewport's height or width,
+                        whichever is smaller of the two
+
+ANGLES
+
+deg                     degrees
+grad                    grads
+rad                     radians
+turn                    turns
+
+TIME
+
+ms                      milli-seconds
+s                       seconds
+
+FREQUENCY
+
+Hz                      hertz
+kHz                     kilo-hertz
+
+COLORS
+
+color name              red, blue, green, dark green
+rgb(x,y,z)              red = rgb(255,0,0)
+rgb(x%,y%,z%)           red = rgb(100%,0,0)
+rgba(x,y,z, alpha)      red = rgba(255,0,0,1)
+#rrggbb                 red = #ff0000 (or shorthand =
+                        #f00)
+hsl(hue, saturation,    red = hsl(0, 100%, 50%)
+lightness)
+hsla(hue, saturation,   red = hsl(0, 100%, 50%)
+lightness, alpha)
+flavor                  An accent color (typically chosen
+                        by the user) to customize the
+                        user interface of the user agent
+                        itself
+currentColor            computed value of the
+                        'currentColor' keyword is the
+                        computed value of the 'color'
+                        property
+
+SELECTOR TYPES
+
+Universal   Any element       * { font: 10px Arial; }
+Type        Any element of    h1 { text-decoration:
+            that type         underline; }
+Grouping    Multiple          h1, h2, h3 { font-family:
+            elements of       Verdana; }
+            different types
+Class       Multiple          .sampleclass
+            elements of       { text-decoration:
+            different types   underline; }
+            when you don’t
+            want to affect
+            all instances of
+            that type
+Id          A single          #sampleid
+            element type      { textdecoration:
+            when you don’t      underline; }
+            want to affect
+            all instances of
+            that type
+Descendant  An element that   #gallery h1
+            is below (in the  { textdecoration:
+            document tree)      underline; }
+            another
+            element—no
+            matter how
+            many levels
+            below
+Child       An element that   #title > p { font-weight:
+            is directly below              bold; }
+            (in the
+            document tree)
+            another
+            element
+Adjacent    All elements      h1 + p { font-style:
+Sibling     that share the             italic; }
+            same parent
+            and elements
+            are in the same
+            immediate
+            sequence
+General     All elements      h1 ~ p { font-style:
+Sibling     that share the             italic; }
+            same parent
+            and elements
+            are in the same
+            sequence (not
+            necessarily
+            immediate)
+Attribute   An element with   E[selected] - att whatever
+            that matches      the value
+            the attribute     E[att="val"] - att with a
+            listed            specific value
+                              E[rel~="next"] - att with
+                              a value is a whitespace
+                              separated list
+                              *[lang|="en"] - att value
+                              either being exactly "val"
+                              or beginning with "val"
+                              immediately followed by
+                              "-"
+                              E[att^="val"] - att value
+                              that begins with the prefix
+                              "val"
+                              E[att$="val"] - att value
+                              that end with the suffix
+                              "val"
+                              E[att*="val"] - att value
+                              contains at least one
+                              instance of the substring
+                              "val"
