@@ -9,8 +9,12 @@ background*		background-image
                         background-clip
                         background-color
 background-attachment   scroll | fixed
-background-break        bounding-box | each-box |
-                        continuous
+background-blend-mode	normal | multiply | screen |
+			overlay | darken | lighten |
+			color-dodge | color-burn |
+			hard-light | soft-light | 
+			difference | exclusion | hue |
+			saturation | color | luminosity
 background-clip         <length>
                         <percent>
                         border-box | padding-box |
