@@ -212,32 +212,35 @@ padding-top             <length>
                         <percent>
 overflow*               visible | hidden | scroll |
                         auto | no-display | no-content
-                        overflow-x
-                        overflow-y
-overflow-style          auto | marquee-line |
-			marquee-block
 overflow-x              visible | hidden | scroll |
                         auto | no-display | no-content
 overflow-y              visible | hidden | scroll |
                         auto | no-display | no-content
-rotation                angle
-rotation-point          position (paired value offset)
 visibility              visible | hidden | collapse
 
 TEXT
 
-direction               ltr | rtl | inherit
-hanging-punctuation     none | [ start | end | end-edge ]
+direction               ltr | rtl | inherit | initial |
+			unset
 letter-spacing          normal
                         <length>
                         <percent>
-punctuation-trim        none | [start | end | adjacent]
 text-align              start | end | left | right |
-                        center | justify
+                        center | justify | justify-all |
+			match-parent
 text-align-last         start | end | left | right |
-                        center | justify
-text-decoration         none | underline | overline |
-                        line-through | blink
+                        center | justify | auto
+text-decoration         none
+			text-decoration-line
+			text-decoration-color
+			text-decoration-style
+text-decoration-line	none | underline | overline |
+			line-through | blink | 
+text-decoration-color	currentColor
+			<color>
+			transparent
+text-decoration-style	solid | double | dotted |
+			dashed | wavy
 text-emphasis           none | [ [ accent | dot | circle
                         | disc] [ before | after ]? ]
 text-indent             <length>
