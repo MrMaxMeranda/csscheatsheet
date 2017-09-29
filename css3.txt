@@ -241,16 +241,21 @@ text-decoration-color	currentColor
 			transparent
 text-decoration-style	solid | double | dotted |
 			dashed | wavy
-text-emphasis           none | [ [ accent | dot | circle
-                        | disc] [ before | after ]? ]
+text-emphasis           none | <string> |
+			text-emphasis-style
+			text-emphasis-color
+text-emphasis-position	over right | over left | under left |
+			left over | right under |left under
+text-emphases-color	currentColor
+			<color>
+			transparent
+text-emphasis-style	none | filled | open |
+			filled sesame | open sesame
 text-indent             <length>
                         <percent>
-text-justify            auto | inter-word |
-			inter-ideograph | inter-cluster |
-                        distribute | kashida | tibetan
-text-outline            none
-                        <color>
-                        <length>
+			hanging | each-line
+text-justify            none | auto | inter-word |
+			inter-character
 text-shadow             none
                         <color>
                         <length>
