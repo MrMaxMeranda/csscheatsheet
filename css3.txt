@@ -271,21 +271,6 @@ word-spacing            normal
                         <length> | <percent>
 word-wrap               normal | break-word
 
-
-TEMPLATE LAYOUT
-
-box-align               start | end | center | base-
-box-direction           normal | reverse
-box-flex                number
-box-flex-group          integer
-box-lines               single | multiple
-box-orient              horizontal | vertical |
-			inline-axis | block-axis
-box-pack                start | end | center | justify
-box-sizing              content-box | padding-box |
-                        border-box | margin-box
-tab-side                top | bottom | left | right
-
 TABLE
 
 border-collapse         collapse | separate
