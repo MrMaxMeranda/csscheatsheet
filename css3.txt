@@ -282,21 +282,19 @@ table-layout            auto | fixed
 
 COLUMN
 
-column-count            auto
-                        number
-column-fill             auto | balance
-column-gap              normal
-                        <length>
-column-rule*            column-rule-width
-                        column-rule-style
+column-count            auto | <integer>
+column-fill             auto | balance | balance-all
+column-gap              normal | <length>
+column-rule*            <column-rule-width>
+                        <column-rule-style>
                         column-rule-color
 column-rule-color       <color>
-column-rule-style       border-style
+column-rule-style       <border-style>
 column-rule-width       thin | medium | thick
                         <length>
-columns*                column-width
-                        column-count
-column-span             1 | all
+columns                 <column-width>
+                        <column-count>
+column-span             none | all
 column-width            auto
                         <length>
 
