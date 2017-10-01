@@ -274,77 +274,11 @@ word-wrap               normal | break-word
 TABLE
 
 border-collapse         collapse | separate
-border-spacing          <length> <length>
-caption-side            top | bottom | left | right
+border-spacing          <h-length> <v-length>
+caption-side            top | bottom | left | right |
+			top-outside | bottom-outside
 empty-cells             show | hide
 table-layout            auto | fixed
-
-
-SPEECH
-
-cue*                    cue-before
-                        cue-after
-cue-before              uri [ silent | x-soft | soft |
-                        medium | loud | x-loud] |
-                        none | inherit ]
-                        number
-                        <percent>
-cue-after               uri [ silent | x-soft | soft |
-                        medium | loud | x-loud] |
-                        none | inherit ]
-                        number
-                        <percent>
-mark*                   mark-before
-                        mark-after
-mark-before             string
-mark-after              string
-
-pause*                  pause-before
-                        pause-after
-pause-before            none | x-weak | weak |
-                        medium | strong | x-strong
-                        | inherit
-                        time
-pause-after             none | x-weak | weak |
-                        medium | strong | x-strong
-                        | inherit
-                        time
-phonemes                string
-rest*                   rest-before
-                        rest-after
-rest-before             none | x-weak | weak |
-                        medium | strong | x-strong
-                        | inherit
-                        time
-rest-after              none | x-weak | weak |
-                        medium | strong | x-strong
-                        | inherit
-                        time
-speak                   none | normal | spell-out |
-                        digits | literal-punctuation |
-                        no-punctuation | inherit
-voice-balance           left | center | right |
-			leftwards | rightwards | inherit
-                        number
-voice-duration          time
-voice-family            inherit | [ <specific-voice,
-                        age, generic-voice, number> ]
-voice-rate              x-slow | slow | medium |
-                        fast | x-fast | inherit
-                        <percent>
-voice-pitch             x-low | low | medium | high
-                        | x-high | inherit
-                        number
-                        <percent>
-voice-pitch-range       x-low | low | medium | high
-                        | x-high | inherit
-                        number
-voice-stress            strong | moderate | none |
-                        reduced | inherit
-voice-volume            silent | x-soft | soft |
-			medium | loud | x-loud | inherit
-                        number
-                        <percent>
 
 COLUMN
 
