@@ -287,7 +287,7 @@ column-fill             auto | balance | balance-all
 column-gap              normal | <length>
 column-rule*            <column-rule-width>
                         <column-rule-style>
-                        column-rule-color
+                        <column-rule-color>
 column-rule-color       <color>
 column-rule-style       <border-style>
 column-rule-width       thin | medium | thick
@@ -295,58 +295,50 @@ column-rule-width       thin | medium | thick
 columns                 <column-width>
                         <column-count>
 column-span             none | all
-column-width            auto
-                        <length>
+column-width            auto | <length>
 
 COLOR
 
-color                   inherit
-                        <color>
-opacity                 inherit
-                        number
+color                   <color>
+opacity                 <number 0 - 1>
 
 LIST & MARKERS
 
-list-style              list-style-type
-                        list-style-position
-                        list-style-image
-list-style-image        none
-                        <url>
-list-style-position     Inside | outside
-list-style-type         none | asterisks | box |
-                        check | circle | diamond |
-                        disc | hyphen | square |
-                        decimal | decimal-leadingzero |
-			lower-roman | upperroman |
+list-style              <list-style-type>
+			<list-style-image>
+                        <list-style-position>
+list-style-image        none | <url>
+list-style-position     inside | outside
+list-style-type         none | circle | decimal |
+			lower-roman | upper-roman |
 			lower-alpha | upper-alpha |
-			lower-greek | lower-latin |
-			upper-latin | hebrew | armenian |
-			georgian | cjk-ideographic |
-			hiragana | katakana |
-			hiragana-iroha | katakana-iroha |
-			footnotes
-marker-offset           auto
-                        <length>
+			lower-greek | lower-latin
 
 ANIMATIONS
 
-animation*              animation-name
-                        animation-duration
-                        animation-timing-function
-                        animation-delay
-                        animation-iteration-count
-                        animation-direction
-animation-delay         time
-animation-direction     normal | alternate
-animation-duration      time
-animation-iteration-count inherit
-                          number
-animation-name          none | IDENT
+animation*              <animation-name>
+                        <animation-duration>
+                        <animation-timing-function>
+                        <animation-delay>
+                        <animation-iteration-count>
+                        <animation-direction>
+animation-delay         <time>
+animation-direction     normal | alternate | reverse |
+			alternate-reverse
+animation-duration      <time>
+animation-fill-mode	none | forwards | backwards |
+			both
+animation-iteration-count infinite
+                          <number>
+animation-name          none | <custom-indent>
 animation-play-state    running | paused
 animation-timing-function ease | linear | ease-in |
                           ease-out | ease-in-out |
-                          cubic-Bezier (number, number,
-			  number, number)
+                          cubic-Bezier (<number>, <number>,
+			  <number>, <number>) | step-start |
+			  step-end | steps(<integer>[,
+			  [start | end] ]?) |
+			  frames(<integer>)
 
 TRANSITIONS
 
