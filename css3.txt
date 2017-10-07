@@ -1,13 +1,18 @@
 BACKGROUND
 
-background*		background-image
-                        background-position
-                        background-size
-                        background-repeat
-                        background-attachment
-                        background-origin
-                        background-clip
-                        background-color
+background 		<background-image> || <position>
+			           [ / <bg-size> ]? ||
+			[repeat-x | repeat-y |
+			    [ repeat | space | round |
+			    no-repeat ]{1,2}] ||
+			[scroll | fixed | local] ||
+			[border-box | padding-box |
+			         content-box]{1,2}
+			<background-image> ||
+			<position> [ / <bg-size> ]? ||
+			<repeat-style> || <attachment> ||
+			<box> || <box> ||
+			<background-color>
 background-attachment   scroll | fixed
 background-blend-mode	normal | multiply | screen |
 			overlay | darken | lighten |
@@ -21,7 +26,7 @@ background-clip         <length>
                         content-box | no-clip
 background-color        <color>
                         transparent
-background-image        <url>
+background-image        <image> |
                         none
 background-origin       border-box | padding-box |
                         content-box
@@ -359,40 +364,54 @@ transition-timing-function ease | linear | ease-in |
 
 OUTLINE
 
-outline*                outline-color
-                        outline-style
-                        outline-width
+outline*		<outline-width>
+                        <outline-style>
+			<outline-color>
 outline-color           <color>
                         invert
-outline-offset          inherit
-                        <length>
-outline-style           None | dotted | dashed |
+outline-offset          <length>
+outline-style           none | auto | dotted | dashed |
                         solid | double | groove |
                         ridge | inset | outset
-outline-width           thin | medium | thick
-                        <length>
+outline-width           thin | medium | thick | <length>
 
 3D / 2D TRANSFORM
 
 backface-visibility     visible | hidden
-perspective             none
-                        number
-perspective-origin      [ [ [ percentage> |
-                        <length> | left | center |
-                        right ] [ <percentage> |
-                        <length> | top | center |
-                        bottom ]? ] <length> ] |
-                        [ [ [ left | center | right ] ||
-                        [ top | center | bottom ] ]
-                        <length> ]
-transform               none | matrix | matrix3d |
-                        translate3d | translateX |
-                        translateY | translateZ |
-                        scale | scale3d | scaleX |
-                        scaleY | scaleZ | rotate |
-                        rotate3d | rotateX | rotateY
-                        | rotateZ | skewX | skewY |
-                        skew | perspective
+perspective             none | <length>
+perspective-origin      left | center | right | top |
+			bottom | <percent> <length>
+			center | top | bottom | <percent>
+			<length>
+transform               none |
+			matrix( <number>
+			     [, <number> ]{5,5} ) ||
+			translate( <length-percentage> ||
+			        [, <length-percentage> ]? ) ||
+			translateX( <length-percentage> ) ||
+			translateY( <length-percentage> ) ||
+			scale( <number> [, <number> ]? ) ||
+			scaleX( <number> ) ||
+			scaleY( <number> ) ||
+			rotate( <angle> ) ||
+			skew( <angle> [, <angle> ]? ) ||
+			skewX( <angle> ) ||
+			skewY( <angle> ) ||
+			matrix3d( <number> [, <number> ]
+			          {15,15} ) ||
+			translate3d( <length-percentage>,
+			 <length-percentage> , <length> ) ||
+			translateZ( <length> ) ||
+			scale3d( <number> , <number> ,
+			         <number> ) ||
+			scaleZ( <number> ) ||
+			rotate3d( <number> , <number> ,
+			          <number> , <angle> ) ||
+			rotateX( <angle> ) ||
+			rotateY( <angle> ) ||
+			rotateZ( <angle> ) ||
+			perspective( <length> )
+
 transform-origin        [ [ [ <percentage> |
                         <length> | left | center |
                         right ] [ <percentage> |
@@ -401,53 +420,25 @@ transform-origin        [ [ [ <percentage> |
                         [ [ [ left | center | right ] ||
                         [ top | center | bottom ] ]
                         <length> ]
+			[ <length-percentage> | left |
+			  center | right | top | bottom ] |
+			[ [ <length-percentage> | left |
+			    center | right ]
+			[ <length-percentage> | top |
+			   center | bottom ] ] <length>?
 transform-style         flat | preserve-3d
 
 GENERATED CONTENT
 
-bookmark-label          content
-                        attr
-                        string
-bookmark-level          none
-                        integer
-bookmark-target         self
-                        uri
-                        attr
-border-length           auto
-                        <length>
-content                 normal | none | inhibit
-                        uri
-counter-increment       none
-                        identifier number
-counter-reset           none
-                        identifier number
-crop                    auto
-                        shape
-display                 normal | none | list-item
-float-offset            <length> <length>
-hyphenate-after         auto
-                        integer
-hyphenate-before        auto
-                        integer
-hyphenate-character     auto
-                        string
-hyphenate-lines         no-limit
-                        integer
-hyphenate-resource      none
-			uri
+content                 none | normal | <string> |
+			<url> | <counter>
+counter-increment       none |
+                        <custom-indent> <integer>?
+counter-reset           none |
+                        <custom-indent> <integer>?
 hyphens                 none | manual | auto
-image-resolution        normal | auto
-                        dpi
-marks                   [ crop || cross ] | none
-move-to                 normal | here
-                        identifier
-page-policy             start | first | last
-quotes                  none
-                        string string string string
-string-set              identifier
-                        content-list
-text-replace            none
-                        [<string> <string>]+
+quotes                  none |
+                        [ <string> <string> ]+
 
 LINE BOX
 
