@@ -1,33 +1,31 @@
 BACKGROUND
 
-background 		<background-image> || <position>
-			           [ / <bg-size> ]? ||
-			[repeat-x | repeat-y |
-			    [ repeat | space | round |
-			    no-repeat ]{1,2}] ||
-			[scroll | fixed | local] ||
-			[border-box | padding-box |
-			         content-box]{1,2}
+background 		[<background-image> ||
+			 <background-position>
+			     [ / <background-size>]? ||
+			 <background-repeat> ||
+			 <background-attachment> ||
+			 <background-clip>{1,2} ||
+			 <color>]*
 			<background-image> ||
-			<position> [ / <bg-size> ]? ||
-			<repeat-style> || <attachment> ||
-			<box> || <box> ||
-			<background-color>
-background-attachment   scroll | fixed
+			<background-position>
+			    [ / <background-size>]? ||
+			<background-repeat> ||
+			<background-attachment> ||
+			<background-clip> ||
+			<background-clip> ||
+			<color>]*
+background-attachment   scroll | fixed | local
 background-blend-mode	normal | multiply | screen |
 			overlay | darken | lighten |
 			color-dodge | color-burn |
 			hard-light | soft-light | 
 			difference | exclusion | hue |
 			saturation | color | luminosity
-background-clip         <length>
-                        <percent>
-                        border-box | padding-box |
-                        content-box | no-clip
+background-clip         border-box | padding-box |
+                        content-box
 background-color        <color>
-                        transparent
-background-image        <image> |
-                        none
+background-image        <image> | none
 background-origin       border-box | padding-box |
                         content-box
 background-position     top left | top center | top
@@ -37,31 +35,41 @@ background-position     top left | top center | top
                         | bottom right
                         <x-percent> <y-percent>
                         <x-pos> <y-pos>
-background-repeat       repeat | repeat-x | repeat-y |
-			no-repeat
-background-size         <length>
-                        <percent>
-                        auto | cover | contain
+background-repeat       repeat-x | repeat-y |
+			[repeat | space | round |
+			  no-repeat]{1,2}
+background-size         [<length-percentage> |
+			         auto ]{1,2} |
+			cover | contain
 
 BORDER
 
-border            	border-width
-                        border-style
-                        border-color
-border-bottom*          border-bottom-width
-                        border-style
-                        border-color
-border-bottom-color     border-color
-border-bottom-style     border-style
+border            	<border-width>
+                        <border-style>
+                        <color>
+border-bottom           <border-bottom-width>
+                        <border-style>
+                        <color>
+border-bottom-color     <color>
+border-bottom-style     <border-style>
 border-bottom-width     thin | medium | thick
                         <length>
 border-collapse         collapse | separate
 border-color            <color>
-border-image            <image>
-                        [ <number> / <percent>
-                        border-width
-                        stretch | repeat | round ]
+border-image            <image> ||
+			<border-image-slice> [ /|
+			  <border-image-width> /|
+			  <border-image-outset>]? ||
+			<border-image-repeat>
                         none
+border-image-slice	<number-percent>{1,4} && fill
+border-image-source	<image>
+border-image-repeat	[stretch | repeat | round |
+			 space]{1,2}
+border-image-width	[<length-percentage> |
+			 <number> |
+			 <auto>]{1,4}
+border-image-outset	[<length> | <number>{1,4}
 border-left*            border-left-width
                         border-style
                         border-color
@@ -83,9 +91,9 @@ border-top-color        border-color
 border-top-style        border-style
 border-top-width        thin | medium | thick
                         <length>
-border-width*           thin | medium | thick
+border-width            thin | medium | thick
                         <length>
-border-radius*          border-top-right-radius
+border-radius           border-top-right-radius
                         border-bottom-right-radius
                         border-bottom-left-radius
                         border-top-left-radius
