@@ -52,8 +52,7 @@ border-bottom           <border-bottom-width>
                         <color>
 border-bottom-color     <color>
 border-bottom-style     <border-style>
-border-bottom-width     thin | medium | thick
-                        <length>
+border-bottom-width     <border-width>
 border-collapse         collapse | separate
 border-color            <color>
 border-image            <image> ||
@@ -63,6 +62,10 @@ border-image            <image> ||
 			<border-image-repeat>
                         none
 border-image-slice	<number-percent>{1,4} && fill
+			/* 1 Value: 4 corners
+			   2 Value: vert and horiz
+			   4 Value: top right bottom left
+			   fill: can be between any value */
 border-image-source	<image>
 border-image-repeat	[stretch | repeat | round |
 			 space]{1,2}
@@ -70,78 +73,87 @@ border-image-width	[<length-percentage> |
 			 <number> |
 			 <auto>]{1,4}
 border-image-outset	[<length> | <number>{1,4}
-border-left*            border-left-width
-                        border-style
-                        border-color
-border-left-color       border-color
-border-left-style       border-style
-border-left-width       thin | medium | thick
+border-left             <border-left-width>
+                        <border-style>
+                        <border-color>
+border-left-color       <color>
+border-left-style       <border-style>
+border-left-width       <border-width>
                         <length>
-border-right*           border-right-width
-                        border-style
-                        border-color
-border-right-color      border-color
-border-right-style      border-style
-border-right-width      thin | medium | thick
-                        <length>
-border-top*             border-top-width
+border-right            <border-right-width>
+                        <border-style>
+                        <border-color>
+border-right-color      <color>
+border-right-style      <border-style>
+border-right-width      <border-width>
+border-top              border-top-width
                         border-style
                         border-color
 border-top-color        border-color
 border-top-style        border-style
-border-top-width        thin | medium | thick
-                        <length>
-border-width            thin | medium | thick
-                        <length>
-border-radius           border-top-right-radius
-                        border-bottom-right-radius
-                        border-bottom-left-radius
-                        border-top-left-radius
-border-top-right-radius <length>
-border-bottom-right-radius <length>
-border-bottom-left-radius <length>
-border-top-left-radius  <length>
-box-shadow              inset || [ <length>, <length>,
-                        <length>, <length> || <color> ]
-                        none
+border-top-width        <border-width>
+border-width            <length> | thin | medium | thick
+border-radius           <length-percentage>{1,4}
+border-top-right-radius <length-percentage>
+border-bottom-right-radius <length-percentage>
+border-bottom-left-radius <length-percentage>
+border-top-left-radius  <length-percentage>
+box-shadow              none | [ inset? && <length>{2,4} &&
+				 <color>?]
+			/* Value 1: offset-x
+			   Value 2: offset-y
+			   Value 3: blur radius
+			   Value 4: spread radius */
 border-style            none | hidden | dotted |
                         dashed | solid | double |
                         groove | ridge | inset |
                         outset
 FONT
 
-font*                   font-style
-                        font-variant
-                        font-weight
-                        font-size/line-height
-                        font-family
+font                    [[<font-style> ||
+                          [ normal | small-caps ] ||
+                            <font-weight> ||
+			    <font-stretch>]?
+                          <font-size> [/<line-height>]?
+                          <font-family>] |
                         caption | icon | menu |
                         message-box | small-caption |
 			status-bar
-font-family             family-name
-                        generic-family
-                        inherit
-font-size               xx-small | x-small | small |
+font-family             [[<string> | <custom-indent>+] |
+			 serif | sans-serif | cursive |
+			 fantasy | monospace]#
+font-size               larger | smaller |
+			xx-small | x-small | small |
                         medium | large | x-large |
-                        xx-large | smaller | larger |
-                        inherit
-                        <length>
-                        <percent>
-font-size-adjust        none| inherit
-                        number
+                        xx-large |
+                        <length-percentage>
+font-size-adjust        none | <number>
 font-stretch            normal | wider | narrower |
                         ultra-condensed |
 			extra-condensed | condensed |
                         semi-condensed | semi-expanded |
 			expanded | extra-expanded |
-			ultra-expanded | inherit
-font-style              normal | italic | oblique |
-                        inherit
+			ultra-expanded
+font-style              normal | italic | oblique
+font-synthesis		none | [ weight || style ]
 font-variant            normal | small-caps | inherit
+font-variant-caps	normal | small-caps |
+			all-small-caps | petite-caps |
+			fall-petite-caps | unicase |
+			titling-caps
+font-variant-numeric	normal | [
+			 [ lining-nums | oldstyle-nums ] ||
+			 [ proportional-nums |
+			   tabular-nums ] ||
+			 [ diagonal-fractions |
+			   stacked-fractions ] ||
+			 ordinal || slashed-zero ]
+font-variant-alternates
+font-variant-ligatures
 font-weight             normal | bold | bolder |
                         lighter | 100 | 200 | 300 |
                         400 | 500 | 600 | 700 | 800
-                        | 900 | inherit
+                        | 900
 BOX MODEL
 
 clear                   left | right | both | none
