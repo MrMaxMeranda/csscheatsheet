@@ -136,7 +136,26 @@ font-stretch            normal | wider | narrower |
 			ultra-expanded
 font-style              normal | italic | oblique
 font-synthesis		none | [ weight || style ]
-font-variant            normal | small-caps | inherit
+font-variant            normal | none |
+			[ <font-variant-ligatures> ||
+			  stylistic( <custom-indent> ) ||
+			  historical-forms ||
+			  styleset( <custom-ident># ) ||
+			  character-variant( <custom-ident># ) ||
+			  swash( <custom-ident> ) ||
+			  ornaments( <custom-ident> ) ||
+			  annotation( <custom-ident> ) ||
+			  <font-variant-caps> ||
+			  [ lining-nums | oldstyle-nums ] ||
+			  [ proportional-nums | tabular-nums ] ||
+			  [ diagonal-fractions | stacked-fractions ] ||
+			  ordinal || slashed-zero ||
+			  <font-variant-east-asia>
+			<font-variant-ligatures> ||
+			<font-variant-caps> ||
+			<font-variant-numeric> ||
+			<font-variant-alternatives> ||
+			<font-variant-east-asian>]
 font-variant-caps	normal | small-caps |
 			all-small-caps | petite-caps |
 			fall-petite-caps | unicase |
@@ -148,30 +167,46 @@ font-variant-numeric	normal | [
 			 [ diagonal-fractions |
 			   stacked-fractions ] ||
 			 ordinal || slashed-zero ]
-font-variant-alternates
-font-variant-ligatures
+font-variant-alternates	normal |
+			[ stylistic( <custom-ident> ) ||
+			  historical-forms ||
+			  styleset( <custom-ident># ) ||
+			  character-variant( <custom-ident># ) ||
+			  swash( <custom-ident> ) || 
+			  ornaments( <custom-ident> ) || 
+			  annotation( <custom-ident> ) ]
+font-variant-ligatures	normal | none |
+			[ [ common-ligatures |
+			    no-common-ligatures ] ||
+			  [ discretionary-ligatures |
+			    no-discretionary-ligatures ] ||
+			  [ historical-ligatures |
+			    no-historical-ligatures ] ||
+			  [ contextual | no-contextual ] ]
 font-weight             normal | bold | bolder |
                         lighter | 100 | 200 | 300 |
                         400 | 500 | 600 | 700 | 800
                         | 900
 BOX MODEL
 
-clear                   left | right | both | none
-display       		block | inline | run-in |
-			---
+clear                   none | left | right | both |
+			inline-start | inline-end
+display       		/* outside */
+			block | inline | run-in |
+			/* inside */
 			flow | flow-root | table | flex |
 			grid | ruby |subgrid |
-			---
+			/* inside and outside */
 			block flow | inline table |
 			flex run-in |
-			---
+			/* list item */
 			list-item | list-item block |
 			list-item inline | list-item flow |
 			list-item flow-root |
 			list-item block flow |
 			list-item block flow-root |
 			flow list-item block |
-			---
+			/* internal */
 			table-row-group | table-header-group |
 			table-footer-group | table-row |
 			table-cell | table-column-group |
@@ -179,14 +214,11 @@ display       		block | inline | run-in |
 			ruby-base | ruby-text |
 			ruby-base-container |
 			ruby-text-container |
-			---
+			/* box */
 			contents | none
-			---
+			/* legacy */
 			inline-block | inline-table |
-			inline-flex | inline-grid |
-			---
-			inherit | initial | unset
-
+			inline-flex | inline-grid
 float                   left | right | none |
 			inline-start | inline-end |
 height                  auto
