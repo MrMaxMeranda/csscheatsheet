@@ -266,25 +266,21 @@ visibility              visible | hidden | collapse
 
 TEXT
 
-direction               ltr | rtl | inherit | initial |
-			unset
-letter-spacing          normal
-                        <length>
-                        <percent>
+direction               ltr | rtl
+letter-spacing          normal | <length>
 text-align              start | end | left | right |
-                        center | justify | justify-all |
-			match-parent
+                        center | justify | match-parent
 text-align-last         start | end | left | right |
                         center | justify | auto
 text-decoration         none
-			text-decoration-line
-			text-decoration-color
-			text-decoration-style
-text-decoration-line	none | underline | overline |
-			line-through | blink | 
-text-decoration-color	currentColor
-			<color>
-			transparent
+			<text-decoration-line> ||
+			<text-decoration-color> ||
+			<text-decoration-style>
+text-decoration-line	none | [ underline || 
+				 overline ||
+				 line-through ||
+				 blink ] 
+text-decoration-color	<color>
 text-decoration-style	solid | double | dotted |
 			dashed | wavy
 text-emphasis           none | <string> |
