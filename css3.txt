@@ -283,24 +283,24 @@ text-decoration-line	none | [ underline ||
 text-decoration-color	<color>
 text-decoration-style	solid | double | dotted |
 			dashed | wavy
-text-emphasis           none | <string> |
-			text-emphasis-style
-			text-emphasis-color
-text-emphasis-position	over right | over left | under left |
-			left over | right under |left under
-text-emphases-color	currentColor
-			<color>
+text-emphasis           <text-emphasis-style> ||
+			<text-emphasis-color>
+text-emphasis-position	[over | under] &&
+			[right | left]
+text-emphases-color	<color>
 			transparent
-text-emphasis-style	none | filled | open |
-			filled sesame | open sesame
-text-indent             <length> | <percent>
-			hanging | each-line
+text-emphasis-style	none | [ [ filled | open ] ||
+			[ dot | circle | double-circle |
+			  triangle | sesame ] ] |
+			<string>
+text-indent             <length-percentage> &&
+			hanging && each-line
 text-justify            none | auto | inter-word |
 			inter-character
-text-shadow             none
-                        <color>
-                        <offset-x> <offset-y>*
-			<blur-radius>
+text-shadow             none | [ <length>{2,3} && <color>?]
+			/* Values 1: Offset-X
+				     Offset-Y
+				     Blur-Radius */
 text-transform          none | capitalize | uppercase
                         | lowercase | full-width
 unicode-bidi            normal | embed | bidi-override |
@@ -309,18 +309,24 @@ unicode-bidi            normal | embed | bidi-override |
 white-space             normal | pre | nowrap |
 			pre-wrap | pre-line
 word-break              normal | keep-all | break-all
-word-spacing            normal
-                        <length> | <percent>
-word-wrap               normal | break-word
+word-spacing            normal | <length-percentage>
+overflow-wrap           normal | break-word
 
 TABLE
 
 border-collapse         collapse | separate
-border-spacing          <h-length> <v-length>
-caption-side            top | bottom | left | right |
-			top-outside | bottom-outside
+border-spacing          <length> <length>?
+			/* 1 value: horiz-vert
+			   2 value: <horiz> <vert> */
+caption-side            top | bottom | block-start |
+			block-end | inline-start |
+			inline-end
 empty-cells             show | hide
 table-layout            auto | fixed
+vertical-align		baseline | sub | super |
+			text-top | text-bottom |
+			middle | top | bottom |
+			<length-percentage>
 
 COLUMN
 
