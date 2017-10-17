@@ -385,19 +385,22 @@ animation*              <animation-name>
 animation-delay         <time>
 animation-direction     normal | alternate | reverse |
 			alternate-reverse
-animation-duration      <time>
+animation-duration      <time>#
 animation-fill-mode	none | forwards | backwards |
 			both
 animation-iteration-count infinite
                           <number>
-animation-name          none | <custom-indent>
+animation-name          none | [<custom-ident> | <string>]#
 animation-play-state    running | paused
-animation-timing-function ease | linear | ease-in |
-                          ease-out | ease-in-out |
-                          cubic-Bezier (<number>, <number>,
-			  <number>, <number>) | step-start |
-			  step-end | steps(<integer>[,
-			  [start | end] ]) |
+animation-timing-function [linear |
+			   [ease | ease-in | ease-out |
+			    ease-in-out |
+			    cubic-bezier(<number>,
+			    		 <number>,
+					 <number>,
+					 <number>)] |
+			  [step-start | step-end |
+			   steps(<integer>[,[start|end]]?] |
 			  frames(<integer>)
 
 TRANSITIONS
