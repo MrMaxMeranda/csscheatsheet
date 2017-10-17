@@ -332,35 +332,47 @@ COLUMN
 
 column-count            auto | <integer>
 column-fill             auto | balance | balance-all
-column-gap              normal | <length>
-column-rule*            <column-rule-width>
-                        <column-rule-style>
-                        <column-rule-color>
+column-gap              normal | <length-percentage>
+column-rule             <column-rule-width> ||
+			<column-rule-style> ||
+			<column-rule-color>
 column-rule-color       <color>
 column-rule-style       <border-style>
-column-rule-width       thin | medium | thick
-                        <length>
-columns                 <column-width>
-                        <column-count>
+column-rule-width       <border-width>
+columns                 <column-width> || <column-count>
 column-span             none | all
 column-width            auto | <length>
 
 COLOR
 
 color                   <color>
-opacity                 <number 0 - 1>
+opacity                 <number>
+			/* 0 to 1 */
 
 LIST & MARKERS
 
-list-style              <list-style-type>
-			<list-style-image>
+list-style              <list-style-type> ||
+			<list-style-image> ||
                         <list-style-position>
 list-style-image        none | <url>
 list-style-position     inside | outside
-list-style-type         none | circle | decimal |
-			lower-roman | upper-roman |
-			lower-alpha | upper-alpha |
-			lower-greek | lower-latin
+list-style-type         none |<string> | symbols()
+			/* <string> examples:
+				circle | decimal |
+				lower-roman |
+				upper-roman |
+				lower-alpha |
+				upper-alpha |
+				lower-greek |
+				lower-latin */
+			/* symbols() example:
+			   list-style-sype:
+			    symbols(cyclic
+			            "*" "†" "‡");*/
+			/* Types:
+				cyclic, numeric,
+				alphabet, symbolic,
+				fixed */
 
 ANIMATIONS
 
