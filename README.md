@@ -3,11 +3,9 @@ CSS Cheat Sheet
 
 *Please note: This is a work in progress.* I am currently working on this document about 5 hours per week, and hope to eventually have a good cheat sheet available for anyone that is in need of one. At the moment, it is incomplete.
 
-This list is originally a "copy" (though re-typed) from:
-
+This list started from being an update from:
 https://www.smashingmagazine.com/wp-content/uploads/images/css3-cheat-sheet/css3-cheat-sheet.pdf
-
-So, the problem with the list is that it is incomplete, horribly full of mistakes (or was full of horrible mistakes?), and I think that I would also prefer a list that has supported CSS, not out-of-date attributes and keywords.
+However, with all the corrections and depreciated values, it turned out to be a mere 'layout' for an almost completely new cheat sheet.
 
 This reference is formatted in a way that I can write it (with real pencil) into my A5 textbook.
 
