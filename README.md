@@ -1,6 +1,8 @@
 # csscheatsheet
 CSS Cheat Sheet
 
+*Please note: This is a work in progress.* I am currently working on this document about 5 hours per week, and hope to eventually have a good cheat sheet available for anyone that is in need of one. At the moment, it is incomplete.
+
 This list is originally a "copy" (though re-typed) from:
 
 https://www.smashingmagazine.com/wp-content/uploads/images/css3-cheat-sheet/css3-cheat-sheet.pdf
