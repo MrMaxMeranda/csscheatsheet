@@ -512,47 +512,15 @@ vertical-align          baseline | sub | super | top
                         | text-bottom |
 			<length-percentage>
 
-HYPERLINK
-
-target                  target-name
-                        target-new
-                        target-position
-target-name             current | root | parent | new
-                        | modal
-                        string
-target-new              window | tab | none
-target-position         above | behind | front |
-                        back
-
 POSITIONING
 
-bottom                  auto
-                        <percent>
-                        <length>
-clip                    shape
-                        auto
-left                    auto
-                        <percent>
-                        <length>
+bottom                  auto | <length-percentage>
+left                    auto | <length-percentage>
 position                static | relative | absolute |
                         fixed
-right                   auto
-                        <percent>
-                        <length>
-top                     auto
-                        <percent>
-                        <length>
-z-index                 auto
-                        number
-
-RUBY
-
-ruby-align              auto | start | left | center |
-                        end | right | distribute-letter
-                        | distribute-space | line-edge
-ruby-overhang           auto | start | end | none
-ruby-position           before | after | right | inline
-ruby-span               attr(x) | none
+right                   auto | <length-percentage>
+top                     auto | <length-percentage>
+z-index                 auto <integer>
 
 PAGED MEDIA
 
