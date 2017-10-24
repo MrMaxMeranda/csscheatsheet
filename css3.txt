@@ -119,7 +119,7 @@ font                    [[<font-style> ||
                         caption | icon | menu |
                         message-box | small-caption |
 			status-bar
-font-family             [[<string> | <custom-indent>+] |
+font-family             [[<string> | <custom-ident>+] |
 			 serif | sans-serif | cursive |
 			 fantasy | monospace]#
 font-size               larger | smaller |
@@ -138,7 +138,7 @@ font-style              normal | italic | oblique
 font-synthesis		none | [ weight || style ]
 font-variant            normal | none |
 			[ <font-variant-ligatures> ||
-			  stylistic( <custom-indent> ) ||
+			  stylistic( <custom-ident> ) ||
 			  historical-forms ||
 			  styleset( <custom-ident># ) ||
 			  character-variant( <custom-ident># ) ||
@@ -424,11 +424,10 @@ transition-timing-function [ linear |
 			     frames(<integer>)]
 OUTLINE
 
-outline*		<outline-width>
-                        <outline-style>
+outline*		<outline-width> ||
+                        <outline-style> ||
 			<outline-color>
-outline-color           <color>
-                        invert
+outline-color           <color> | invert
 outline-offset          <length>
 outline-style           none | auto | dotted | dashed |
                         solid | double | groove |
@@ -444,33 +443,33 @@ perspective-origin      left | center | right | top |
 			center | top | bottom | <percent>
 			<length>
 transform               none |
-			matrix( <number>
+			[ matrix( <number>
 			     [, <number> ]{5,5} ) ||
-			translate( <length-percentage> ||
-			        [, <length-percentage> ]? ) ||
-			translateX( <length-percentage> ) ||
-			translateY( <length-percentage> ) ||
-			scale( <number> [, <number> ]? ) ||
-			scaleX( <number> ) ||
-			scaleY( <number> ) ||
-			rotate( <angle> ) ||
-			skew( <angle> [, <angle> ]? ) ||
-			skewX( <angle> ) ||
-			skewY( <angle> ) ||
-			matrix3d( <number> [, <number> ]
-			          {15,15} ) ||
-			translate3d( <length-percentage>,
-			 <length-percentage> , <length> ) ||
-			translateZ( <length> ) ||
-			scale3d( <number> , <number> ,
-			         <number> ) ||
-			scaleZ( <number> ) ||
-			rotate3d( <number> , <number> ,
-			          <number> , <angle> ) ||
-			rotateX( <angle> ) ||
-			rotateY( <angle> ) ||
-			rotateZ( <angle> ) ||
-			perspective( <length> )
+			  translate( <length-percentage> ||
+			          [, <length-percentage> ]? ) ||
+			  translateX( <length-percentage> ) ||
+			  translateY( <length-percentage> ) ||
+			  scale( <number> [, <number> ]? ) ||
+			  scaleX( <number> ) ||
+			  scaleY( <number> ) ||
+			  rotate( <angle> ) ||
+			  skew( <angle> [, <angle> ]? ) ||
+			  skewX( <angle> ) ||
+			  skewY( <angle> ) ||
+			  matrix3d( <number> [, <number> ]
+			            {15,15} ) ||
+			  translate3d( <length-percentage>,
+			   <length-percentage> , <length> ) ||
+			  translateZ( <length> ) ||
+			  scale3d( <number> , <number> ,
+			           <number> ) ||
+			  scaleZ( <number> ) ||
+			  rotate3d( <number> , <number> ,
+			            <number> , <angle> ) ||
+			  rotateX( <angle> ) ||
+			  rotateY( <angle> ) ||
+			  rotateZ( <angle> ) ||
+			  perspective( <length> )]+
 
 transform-origin        [ [ [ <percentage> |
                         <length> | left | center |
@@ -490,80 +489,28 @@ transform-style         flat | preserve-3d
 
 GENERATED CONTENT
 
-content                 none | normal | <string> |
-			<url> | <counter>
+content                 normal | none |
+			[ counter(<counter-increment>) |
+			  <attr()> | <string> |
+			  open-quote | close-quote |
+			  no-open-quote |
+			  no-close-quote | <image> ]+
 counter-increment       none |
-                        <custom-indent> <integer>?
+                        [ <custom-ident> <integer>? ]+
 counter-reset           none |
-                        <custom-indent> <integer>?
+                        [ <custom-ident> <integer>? ]+
 hyphens                 none | manual | auto
 quotes                  none |
                         [ <string> <string> ]+
 
 LINE BOX
 
-alignment-adjust        auto | baseline | before-edge |
-			text-before-edge | middle |
-			central | after-edge |
-			text-after-edge | ideographic |
-			alphabetic | hanging | mathematical
-                        <length>
-                        <percent>
-alignment-baseline      baseline | use-script |
-			before-edge | text-before-edge |
-			after-edge | text-after-edge |
-			central | middle | ideographic |
-			alphabetic | hanging
-			mathematical
-baseline-shift          baseline | sub | super
-                        <length>
-                        <percent>
-dominant-baseline       auto | use-script | no-change |
-			reset-size | alphabetic |
-			hanging | ideographic |
-			mathematical | central | middle |
-			text-after-edge | text-before-edge
-drop-initial-after-align alignment-baseline
-drop-initial-after-adjust central | middle | after-edge
-                          | text-after-edge |
-			  ideographic | alphabetic |
-                          mathematical
-                          <length>
-                          <percent>
-drop-initial-before-align caps-height
-                          alignment-baseline
-drop-initial-before-adjust before-edge | text-before-edge |
-			   central | middle |
-                           hanging | mathematical
-                           <length>
-                           <percent>
-drop-initial-value      initial
-                        integer
-drop-initial-size       auto
-                        integer
-                        <percent>
-                        line
-inline-box-align        initial | last
-                        integer
-line-height             normal
-                        number
-                        <length>
-                        <percent>
-line-stacking*          line-stacking-strategy
-                        line-stacking-ruby
-                        line-stacking-shift
-line-stacking-strategy  inline-line-height |
-			block-line-height | max-height |
-                        grid-height
-line-stacking-ruby      exclude-ruby | include-ruby
-line-stacking-shift     consider-shifts | disregard-shifts
-text-height             auto | font-size | text-size |
-                        max-size
-vertical-align          Baseline | sub | super | top
+line-height             normal | <number> |
+			<length-percentage>
+vertical-align          baseline | sub | super | top
                         | text-top | middle | bottom
-                        | text-bottom
-                        <length>
-                        <percent>
+                        | text-bottom |
+			<length-percentage>
 
 HYPERLINK
 
@@ -878,3 +825,14 @@ Attribute   An element with   E[selected] - att whatever
                               contains at least one
                               instance of the substring
                               "val"
+Functions:
+attr()		attr( <attr-name> <type-or-unit>? [,
+		<attr-fallback> ]? )
+
+		where 
+		<type-or-unit> = string | integer |
+		color | url | integer | number | length
+		| angle | time | frequency | em | ex |
+		px | rem | vw | vh | vmin | vmax | mm |
+		q | cm | in | pt | pc | deg |
+		grad | rad | ms | s | Hz | kHz | %
