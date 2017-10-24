@@ -524,44 +524,38 @@ z-index                 auto <integer>
 
 PAGED MEDIA
 
-fit                     fill | hidden | meet | slice
-fit-position            [top | center | bottom] ||
-                        [left | center | right]
-                        <length>
-                        <percent>
-image-orientation       auto
-                        angle
-orphans                 integer
-page                    auto
-                        identifier
+image-orientation       from-image | <angle> |
+			[<angle>? flip]
+			/* from-image uses EXIF data
+			   contined in the image */
+orphans                 <integer>
 page-break-after        auto | always | avoid | left |
                         right
 page-break-before       auto | always | avoid | left |
                         right
 page-break-inside       auto | avoid
-size                    auto | landscape | portrait
-                        <length>
-windows                 integer
+windows                 <integer>
 
 UI
 
-appearance              normal | inherit |
-			[icon | window | desktop |
-			workspace | document | tooltip |
-			dialog | button | push-button |
-			hyperlink | radio-button |
-			checkbox | menu-item | tab |
-			menu | menu-bar | pull-down-menu |
-			pop-up-menu | list-menu |
-			radio-group | checkbox-group |
-			outline-tree | range | field |
-			combo-box | signature | password]
-cursor                  auto | crosshair | default |
-			pointer | move | e-resize |
-			ne-resize | nw-resize | n-resize |
-			se-resize | sw-resize | s-resize |
-			w-resize | text | wait | help
-			<url>
+cursor                  [[ <url> [ <x> <y> ]? , ]*
+			 [ auto | default | none |
+			   context-menu | help |
+			   pointer | progress | wait |
+			   cell | crosshair | text |
+			   vertical-text | alias |
+			   copy | move | no-drop |
+			   not-allowed | e-resize |
+			   n-resize | ne-resize |
+			   nw-resize | s-resize |
+			   se-resize | sw-resize |
+			   w-resize | ew-resize |
+			   ns-resize | nesw-resize |
+			   nwse-resize | col-resize |
+			   row-resize | all-scroll |
+			   zoom-in | zoom-out | grab |
+			   grabbing ] ]
+
 icon                    auto | inherit
                         <url>
 nav-index               auto | inherit
