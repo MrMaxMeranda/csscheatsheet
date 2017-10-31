@@ -4,3 +4,4 @@ Things to do:
 4:	Clarify <color> (even though 'color' shoud be
 	spelled 'colour')
 5:	Clarify <image>
+6:	Clarify <angle>

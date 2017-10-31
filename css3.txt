@@ -714,7 +714,7 @@ PSEUDO-ELEMENT
 UNITS
 
 <length-percentage>	<length> | <percentage>
-<percentage>		consists of a <number> followed
+<percentage>		Consists of a <number> followed
 			by the percentage sign (%).
 			Optionally, it may be preceded
 			by a single + or - sign,
@@ -723,17 +723,24 @@ UNITS
 			As with all CSS dimensions,
 			there is no space between the
 			symbol and the number.
+<length>		Consists of a <number> followed
+			by one of the units listed
+			below:
 
-ABSOLUTE MEASUREMENT
+ABSOLUTE UNITS
 
 px			Traditionally one device pixel.
 mm                      millimeter
 cm                      centimeter
-in                      inch
-pt                      point (1pt = 1/72 inch)
-pc                      pica (1p = 12 points)
+in                      inch (2.54 cm)
+pt                      point (1/72 inch)
+pc                      pica (12 points)
+			/* 1in is always 96px.
+			   3pt is always 4px.
+			   25.4mm is always 96px. */
 
-RELATIVE MEASUREMENT
+
+RELATIVE UNITS
 
 ch                      width of the "0" glyph found in
                         the font for the font size used
@@ -742,12 +749,16 @@ em                      1em = current font size of
                         current element
 ex                      x-height of the element's font
 gd                      the grid defined by 'layout-grid'
-px                      pixel of the viewing device
 rem                     the font size of the root element
-vh                      the viewport's height
-vw                      the viewport's width
-vm                      viewport's height or width,
+
+VIEWPORT PERCENTAGE LENGTHS
+
+vh                      The viewport's height
+vw                      The viewport's width
+vmin                    Viewport's height or width,
                         whichever is smaller of the two
+vmax			Viewport's height or width,
+                        whichever is larger of the two
 
 ANGLES
 
