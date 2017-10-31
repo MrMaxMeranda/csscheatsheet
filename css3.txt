@@ -1,3 +1,4 @@
+SELECTORS:
 BACKGROUND
 
 background 		[<background-image> ||
@@ -554,93 +555,140 @@ cursor                  [[ <url> [ <x> <y> ]? , ]*
 			   nwse-resize | col-resize |
 			   row-resize | all-scroll |
 			   zoom-in | zoom-out | grab |
-			   grabbing ] ]
-
-icon                    auto | inherit
-                        <url>
-nav-index               auto | inherit
-                        number
-nav-up                  auto | inherit
-                        <id> [ current | root |
-                        <target-name> ]
-nav-right               auto | inherit
-                        <id> [ current | root |
-                        <target-name> ]
-nav-down                auto | inherit
-                        <id> [ current | root |
-                        <target-name> ]
-nav-left                auto | inherit
-                        <id> [ current | root |
-                        <target-name> ]
+			   grabbing ]]
 resize                  none | both | horizontal |
-                        vertical | inherit
-
-• Values in italics are place holders for an actual
-value (like 1px, 1em, 1%), values in normal text are
-values that can be used as the actual value
-
-• CSS Properties in Dark Red are shorthand properties
-and each value must be defined. The exception is where
-the property can define from one to four of the sides of
-a box element property
-(Top-Right-Bottom-Left) - i.e. border-width
+                        vertical
 
 PSEUDO-CLASS
 
-:active                 an activated element
-:focus                  an element while the
-                        element has focus
-:visited                a visited link
-:hover                  an element when you mouse
-                        over it
-:link                   an unvisited link
-:disabled               an element while the
-                        element is disabled
-:enabled                an element while the
-                        element is enabled
-:checked                an element (form element
-                        control) that is checked
-:selection              an element that is currently
-                        selected of highlighted by
-                        the user
-:lang                   Allows the author to specify
-                        a language to use in a
-                        specified element
-                        an element that is the n-th
-                        sibling
-:nth-child(n)           an element that is the n-th
-                        sibling counting from the
-                        last sibling
-:nth-last-child(n)      an element that is the last
-                        sibling
-:first-child            an element that is the first
-                        sibling
-:last-child             an element that is the last
-                        child
+:active			represents an element (such as
+			a button) that is being
+			activated by the user. When
+			using a mouse, "activation"
+			typically starts when the user
+			presses down the primary mouse
+			button and ends when it is
+			released. The :active
+			pseudo-class is commonly used
+			on <a> and <button> elements,
+			but may be used on other
+			elements, too.
+:checked		represents any <radio>,
+			<checkbox>, or <option> element
+			that is checked.
+:default		any form element that is the
+			default among a group of
+			related elements.
+:disabled               represents any disabled element
+:empty                  an element that has no children
+:enabled                represents any enabled element.
+			An element is enabled if it can
+			be activated (selected, clicked
+			on, typed into, etc.) or accept
+			focus.
+:first			used with the  @page at-rule,
+			represents the first page of a
+			printed document.
+:first-child            represents the first element
+			among a group of sibling
+			elements.
+:first-of-type          represents the first element of
+			its type among a group of
+			sibling elements.
+:focus                  represents an element (such as
+			a form input) that has received
+			focus.
+:hover                  an element when you mouse over
+			it
+:indeterminate		represents any form element
+			whose state is indeterminate.
+:in-range		represents an <input> element
+			whose current value is within
+			the range limits specified by
+			the min and max attributes.
+:invalid		represents any <input> or other
+			<form> element whose contents
+			fail to validate.
+:lang(<lang>)           Allows the author to specify a
+			language to use in a specified
+			element an element that is the
+			n-th sibling
+:last-child             represents the last element
+			among a group of sibling
+			elements.
+:last-of-type           represents the last element of
+			its type among a group of
+			sibling elements.
+:left			used with the @page at-rule,
+			represents all left-hand pages
+			of a printed document.
+:link                   an unvisited link.
+:not(<element>)         represents elements that do not
+			match a list of selectors
+:nth-child(<nth>)       an element that is the n-th
+			sibling counting from the last
+			sibling.
+:nth-last-child(<nth>)  an element that is the last
+			sibling.
+:nth-last-of-type(<nth>)an element that is the n-th
+			sibling of its type counting
+			from the last sibling.
+:nth-of-type(<nth>)     an element that is the n-th
+			sibling of its type.
 :only-child             an element that is the only
-                        child
-:nth-of-type(n)         an element that is the n-th
-                        sibling of its type.
-:nth-last-of-type(n)    an element that is the n-th
-                        sibling of its type counting
-                        from the last sibling
-:last-of-type           an element that is the last
-                        sibling of its type
-:first-of-type          an element that is the first
-                        sibling of its type
+			child.
 :only-of-type           an element that is the only
-                        child of that type
-:empty                  an element that has no
-                        children
+			child of that type
+:optional		represents any <input>,
+			<select>, or <textarea> element
+			that does not have the required
+			attribute set on it.
+:out-of-range		represents an <input> element
+			whose current value is outside
+			the range limits specified by
+			the min and max attributes.
+:read-only		represents an element (such as
+			a locked text input) that is
+			not editable by the user.
+:read-write		represents an element (such as
+			a text input) that is editable
+			by the user.
+:required		represents any <input>,
+			<select>, or <textarea> element
+			that has the required attribute
+			set on it.
+:right			used with the  @page at-rule,
+			represents all right-hand pages
+			of a printed document.
 :root                   root element within the
-                        document
-:not(x)                 an element not represented
-                        by the argument ‘x’
-:target                 a target element as specified
-                        by a target in a URI
+			document. It represents the
+			<html> element and is identical
+			to the selector html, except
+			that its specificity is higher.
+:scope			represents elements that are a
+			reference point for selectors
+			to match against.
+:target			represents a unique element
+			(the target element) with an id
+			matching the URL's fragment.
+:valid			represents any <input> or other
+			<form> element whose contents
+			validate successfully.  This
+			allows to easily make valid
+			fields adopt an appearance that
+			helps the user confirm that
+			their data is formatted
+			properly.
+:visited		represents links that the user
+			has already visited. For
+			privacy reasons, the styles
+			that can be modified using this
+			selector are very limited.
 
 PSEUDO-ELEMENT
 
+::cue			Matches WebVTT cues within a
+			selected element
 ::first-letter          Adds special style to the first
                         letter of a text
 ::first-line            Adds special style to the first
@@ -649,6 +697,9 @@ PSEUDO-ELEMENT
                         an element
 ::after                 Inserts some content after an
                         element
+::selection		Applies styles to the portion
+			of a document that has been
+			highlighted
 
 UNITS
 
