@@ -713,14 +713,25 @@ PSEUDO-ELEMENT
 
 UNITS
 
+<length-percentage>	<length> | <percentage>
+<percentage>		consists of a <number> followed
+			by the percentage sign (%).
+			Optionally, it may be preceded
+			by a single + or - sign,
+			although negative values are
+			not valid for all properties.
+			As with all CSS dimensions,
+			there is no space between the
+			symbol and the number.
+
 ABSOLUTE MEASUREMENT
 
-%                       percentage
+px			Traditionally one device pixel.
+mm                      millimeter
 cm                      centimeter
 in                      inch
-mm                      millimeter
-pc                      pica (1p = 12 points)
 pt                      point (1pt = 1/72 inch)
+pc                      pica (1p = 12 points)
 
 RELATIVE MEASUREMENT
 
