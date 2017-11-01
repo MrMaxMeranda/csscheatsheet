@@ -1,7 +1,4 @@
 Things to do:
 1:	Clarify <element> in the pseudo elements list
 2:	Clarify <nth> in the pseudo elements list
-4:	Clarify <color> (even though 'color' shoud be
-	spelled 'colour')
 5:	Clarify <image>
-6:	Clarify <angle>

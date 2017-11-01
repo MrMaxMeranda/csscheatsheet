@@ -727,7 +727,7 @@ UNITS
 			by one of the units listed
 			below:
 
-ABSOLUTE UNITS
+ABSOLUTE <length> UNITS
 
 px			Traditionally one device pixel.
 mm                      millimeter
@@ -740,7 +740,7 @@ pc                      pica (12 points)
 			   25.4mm is always 96px. */
 
 
-RELATIVE UNITS
+RELATIVE <length> UNITS
 
 ch                      width of the "0" glyph found in
                         the font for the font size used
@@ -760,43 +760,66 @@ vmin                    Viewport's height or width,
 vmax			Viewport's height or width,
                         whichever is larger of the two
 
-ANGLES
+<angle> UNITS:
 
-deg                     degrees
-grad                    grads
-rad                     radians
-turn                    turns
+/* Optional preceding + or - sign */
+(0 to 360)deg           degrees
+(0 to 400)grad          gradians
+(0 to 6.2832)rad        radians
+(0 to 1)turn            turns
 
-TIME
+<time>
 
 ms                      milli-seconds
 s                       seconds
 
-FREQUENCY
+<color>
 
-Hz                      hertz
-kHz                     kilo-hertz
-
-COLORS
-
-color name              red, blue, green, dark green
-rgb(x,y,z)              red = rgb(255,0,0)
-rgb(x%,y%,z%)           red = rgb(100%,0,0)
-rgba(x,y,z, alpha)      red = rgba(255,0,0,1)
-#rrggbb                 red = #ff0000 (or shorthand =
-                        #f00)
-hsl(hue, saturation,    red = hsl(0, 100%, 50%)
-lightness)
-hsla(hue, saturation,   red = hsl(0, 100%, 50%)
-lightness, alpha)
-flavor                  An accent color (typically chosen
-                        by the user) to customize the
-                        user interface of the user agent
-                        itself
+transparent
 currentColor            computed value of the
                         'currentColor' keyword is the
                         computed value of the 'color'
                         property
+<color name>            red, blue, green, dark green
+rgb(r,g,b[,a])          red = rgb(255,0,0[,0])
+rgb(r%,g%,b%[,a%])      red = rgb(100%,0%,0%[,0%])
+#rrggbb                 red = #ff0000[00]
+#rgb			red = #f00[0]
+hsl(H,S%,L%[,a])        red = hsl(0, 100%, 50%[,0])
+			/* hue = <angle> (default = deg
+			   Saturation = percentage
+			   Lightness = percentage
+			   Alpha = 0 to 1 */
+
+/* These examples all specify the same color: hot pink. */
+
+/* Hexadecimal syntax */
+#f09
+#F09
+#ff0099
+#FF0099
+
+/* Functional syntax */
+rgb(255,0,153)
+rgb(255, 0, 153)
+rgb(255, 0, 153.0) /* ERROR! Don't use fractions. */
+rgb(100%,0%,60%)
+rgb(100%, 0%, 60%)
+rgb(100%, 0, 60%) /* ERROR! Don't mix integers and
+percentages. */
+rgb(255 0 153)
+
+/* Hexadecimal syntax with alpha value */
+#f09f
+#F09F
+#ff0099ff
+#FF0099FF
+
+/* Functional syntax with alpha value */
+rgb(255, 0, 153, 1)
+rgb(255, 0, 153, 100%)
+rgb(255 0 153 / 1)
+rgb(255 0 153 / 100%)
 
 SELECTOR TYPES
 
