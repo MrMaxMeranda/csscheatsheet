@@ -2,3 +2,4 @@ Things to do:
 1:	Clarify <element> in the pseudo elements list
 2:	Clarify <nth> in the pseudo elements list
 5:	Clarify <image>
+6:	List functions
