@@ -3,6 +3,8 @@ CSS Cheat Sheet
 
 *Please note: This is a work in progress.* I am currently working on this document about 5 hours per week, and hope to eventually have a good cheat sheet available for anyone that is in need of one. At the moment, it is incomplete.
 
+When this list is complete, I will be able to do many things with it. It currently has a line width of 55 characters, but even this won't be a problem once it is complete as carriage returns and whitespace are nothing more than mere details in my editor. 
+
 This list started from being an update from:
 https://www.smashingmagazine.com/wp-content/uploads/images/css3-cheat-sheet/css3-cheat-sheet.pdf
 However, with all the corrections and depreciated values, it turned out to be a mere 'layout' for an almost completely new cheat sheet.
