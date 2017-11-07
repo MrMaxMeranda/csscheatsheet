@@ -623,7 +623,7 @@ PSEUDO-CLASS
 			represents all left-hand pages
 			of a printed document.
 :link                   an unvisited link.
-:not(<element>)         represents elements that do not
+:not(<selector>#)       represents elements that do not
 			match a list of selectors
 :nth-child(<nth>)       an element that is the n-th
 			sibling counting from the last
@@ -684,6 +684,28 @@ PSEUDO-CLASS
 			privacy reasons, the styles
 			that can be modified using this
 			selector are very limited.
+
+/* Variable definition notes: */
+<selector>   * Useless selectors can be written using
+	       this pseudo-class. For example, :not(*)
+	       matches any element which is not an
+	       element, so the rule will never be
+	       applied.
+	     * This pseudo-class can increase
+	       the specificity of a rule. For example,
+	       #foo:not(#bar) will match the same
+	       element as the simpler #foo, but has a
+	       higher specificity.
+	     * :not(.foo) will match
+	       anything that isn't .foo, including
+	       <html> and <body>.
+	     * This selector only applies to
+	       one element; you cannot use it to
+	       exclude all ancestors. For instance,
+	       body :not(table) a will still apply to
+	       links inside of a table, since <tr> will
+	       match with the :not() part of the
+	       selector.
 
 PSEUDO-ELEMENT
 
@@ -899,6 +921,7 @@ Descendant combinator 		A B
 				    
 
 Functions:
+/* *Mostly* used with 'content' */
 attr()		attr( <attr-name> <type-or-unit>? [,
 		<attr-fallback> ]? )
 
@@ -908,4 +931,4 @@ attr()		attr( <attr-name> <type-or-unit>? [,
 		| angle | time | frequency | em | ex |
 		px | rem | vw | vh | vmin | vmax | mm |
 		q | cm | in | pt | pc | deg |
-		grad | rad | ms | s | Hz | kHz | %
+		grad | rad | ms | s | Hz | kHz | %lk
