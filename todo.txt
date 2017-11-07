@@ -1,7 +1,4 @@
 Things to do:
-1:	Clarify <element> in the pseudo elements list
-2:	Clarify <nth> in the pseudo elements list
 5:	Clarify <image>
-6:	List functions
 8:	Make a note of things listed on:
 	https://developer.mozilla.org/en-US/docs/Web/CSS/Value_definition_syntax
