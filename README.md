@@ -3,13 +3,13 @@ CSS Cheat Sheet
 
 *Please note: This is a work in progress.* I am currently working on this document about 5 hours per week, and hope to eventually have a good cheat sheet available for anyone that is in need of one. At the moment, it is incomplete.
 
+This reference is formatted in a way that I can write it (with real pencil) into my A5 textbook.
+
 When this list is complete, I will be able to do many things with it. It currently has a line width of 55 characters, but even this won't be a problem once it is complete as carriage returns and whitespace are nothing more than mere details in my editor. 
 
 This list started from being an update from:
 https://www.smashingmagazine.com/wp-content/uploads/images/css3-cheat-sheet/css3-cheat-sheet.pdf
 However, with all the corrections and depreciated values, it turned out to be a mere 'layout' for an almost completely new cheat sheet.
-
-This reference is formatted in a way that I can write it (with real pencil) into my A5 textbook.
 
 The purpose of this reference is to help me get through using CSS effectively. It's often hard to use a feature of something if you don't even know it exists!
 
