@@ -503,6 +503,25 @@ counter-reset           none |
 hyphens                 none | manual | auto
 quotes                  none |
                         [ <string> <string> ]+
+/* attr() notes: */
+attr()		attr( <attr-name>
+		      [ string | integer | color |
+			url | integer | number |
+			length | angle | time |
+			frequency | em | ex | px |
+			rem | vw | vh | vmin | vmax |
+			mm | q | cm | in | pt | pc |
+			deg | grad | rad | ms | s |
+			Hz | kHz | %lk ]?
+		      [, <fallback> ]?)
+/* <attr-name> is the name of an attribute on the HTML
+               element referenced in CSS.
+   <fallback>  is the value to be used if the
+	       associated attribute is missing or
+	       contains an invalid value.  If not set,
+	       CSS will use the default value defined
+	       for each <type-or-unit>. */
+/* Please note: 'can' be used with other properties */
 
 LINE BOX
 
@@ -706,6 +725,32 @@ PSEUDO-CLASS
 	       links inside of a table, since <tr> will
 	       match with the :not() part of the
 	       selector.
+<nth>	     <an-plus-b> | even | odd
+	     /* Examples */
+	     tr:nth-child(odd) or tr:nth-child(2n+1)
+		 Represents the odd rows of an HTML
+		 table: 1, 3, 5, etc.
+	     tr:nth-child(even) or tr:nth-child(2n)
+		 Represents the even rows of an HTML
+		 table: 2, 4, 6, etc.
+	     :nth-child(7)
+		 Represents the seventh element.
+	     :nth-child(5n)
+		 Represents elements 5, 10, 15, etc.
+	     :nth-child(3n+4)
+		 Represents elements 4, 7, 10, 13, etc.
+	     :nth-child(-n+3)
+		 Represents the first three elements
+		 among a group of siblings.
+	     p:nth-child(n)
+		 Represents every <p> element among a
+		 group of siblings. This is the same as
+		 a simple p selector.
+	     p:nth-child(1) or p:nth-child(0n+1)
+		 Represents every <p> that is the first
+		 element among a group of siblings.
+		 This is the same as the :first-child
+		 selector. 
 
 PSEUDO-ELEMENT
 
@@ -918,17 +963,3 @@ Descendant combinator 		A B
       elements matched by the second selector are
       selected if they have an ancestor element
       matching the first selector. */
-				    
-
-Functions:
-/* *Mostly* used with 'content' */
-attr()		attr( <attr-name> <type-or-unit>? [,
-		<attr-fallback> ]? )
-
-		where 
-		<type-or-unit> = string | integer |
-		color | url | integer | number | length
-		| angle | time | frequency | em | ex |
-		px | rem | vw | vh | vmin | vmax | mm |
-		q | cm | in | pt | pc | deg |
-		grad | rad | ms | s | Hz | kHz | %lk
