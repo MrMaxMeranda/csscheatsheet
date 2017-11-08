@@ -986,3 +986,16 @@ juxtaposed	Juxtaposed components are mandatory,
 #		Can appear one or several times, but
 		comma separated.
 !		Can have at least one value.
+
+/* All CSS properties accept the keywords INHERIT,
+   INITIAL and UNSET, that are defined throughout CSS.
+   They are not shown in the value definition, and are
+   implicitly defined. */
+inherit		Causes the element for which it is
+		specified to take the computed value of
+		the property from its parent element.
+initial		applies the default value of a property
+		to an element.
+unset		Resets a property to its inherited
+		value if it inherits from its parent,
+		and to its initial value if not.
