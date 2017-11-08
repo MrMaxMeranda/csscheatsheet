@@ -518,7 +518,7 @@ attr()		attr( <attr-name>
                element referenced in CSS.
    <fallback>  is the value to be used if the
 	       associated attribute is missing or
-	       contains an invalid value.  If not set,
+	       contains an invalid value. If not set,
 	       CSS will use the default value defined
 	       for each <type-or-unit>. */
 /* Please note: 'can' be used with other properties */
@@ -963,3 +963,26 @@ Descendant combinator 		A B
       elements matched by the second selector are
       selected if they have an ancestor element
       matching the first selector. */
+
+SYNTAX USED IN THIS DOCUMENT
+<data>		Basic data type; define elsewhere in
+		this document.
+[ ]		Combining entities, etc. and transform
+		them as a single component.
+juxtaposed	Juxtaposed components are mandatory,
+		and should appear in the exact order.
+&&		Entities are mandatory, but may appear
+		in any order.
+||		Entities are options; at least of them
+		must be present, and can appear in any
+		order.
+|		Entities are exclusive options; exactly
+		one of these options must be present.
+*		Can appear zero, one or several times.
++		Can appear one or several times.
+?		Can appear zero or one time.
+{A,B}		Can appear at least A times and at most
+		B times.
+#		Can appear one or several times, but
+		comma separated.
+!		Can have at least one value.
