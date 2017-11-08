@@ -889,6 +889,13 @@ rgb(255, 0, 153, 100%)
 rgb(255 0 153 / 1)
 rgb(255 0 153 / 100%)
 
+<image> TYPES:
+url()			url('http://google.com')
+			url("http://google.com")
+			url(http://google.com)
+GRADIENTS
+linear-gradient()	
+
 SELECTOR TYPES
 
 BASIC SELECTORS:
