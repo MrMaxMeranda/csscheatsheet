@@ -1,4 +1,3 @@
 Things to do:
 5:	Clarify <image>
-8:	Make a note of things listed on:
-	https://developer.mozilla.org/en-US/docs/Web/CSS/Value_definition_syntax
+9:	inherit, initial, and unset to be included
