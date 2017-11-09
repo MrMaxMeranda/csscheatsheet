@@ -893,31 +893,17 @@ rgb(255 0 153 / 100%)
 url('http://google.com')
 url("http://google.com")
 url(http://google.com)
+
 GRADIENTS
 /* Gradients only work for <image> data types, not
    <color> */
-linear-gradient( <angle> |
-		 to [left | right] || [top | bottom],]?
-	       [ <color> [ <length-percentage> ]?]
-	       [, <color> [ <length-percentage> ]?]+)
-     /* linear-gradient(45deg, blue, red);
-        linear-gradient(to left top, blue, red);
-        linear-gradient(0deg, blue, green 40%, red); */
-
-radial-gradient([ [ circle || <length> ] [ at <position> ]? , |
-    [ ellipse || [ <length-percentage> ]{2} ]  [ at
-    <position> ]? , |
-        [ [ circle | ellipse ] || <extent-keyword> ]
-	[ at <position> ]? , |
-	    at <position> ,
-	      ]?
-	        <color-stop> [ , <color-stop> ]+
-		)
-		where <extent-keyword> = closest-corner
-		| closest-side | farthest-corner |
-		farthest-side
-		  and <color-stop>     = <color> [
-		  <percentage> | <length> ]?
+linear-gradient(<direction>, <color-stop>, <color-stop>,
+		...);
+radial-gradient(shape size at position, start-color,
+                ..., last-color);
+<direction>		<angle> |
+			[ to [ left | right ] ||
+			     [ top | bottom ] ]
 
 SELECTOR TYPES
 
