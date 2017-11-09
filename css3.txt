@@ -897,13 +897,13 @@ url(http://google.com)
 GRADIENTS
 /* Gradients only work for <image> data types, not
    <color> */
-linear-gradient(<direction>, <color-stop>, <color-stop>,
-		...);
+linear-gradient(<direction>, [<color-stop>]#);
 radial-gradient(shape size at position, start-color,
                 ..., last-color);
 <direction>		<angle> |
 			[ to [ left | right ] ||
 			     [ top | bottom ] ]
+<color-stop>		<color> [<length-percentage>]?
 
 SELECTOR TYPES
 
@@ -989,9 +989,9 @@ juxtaposed	Juxtaposed components are mandatory,
 		and should appear in the exact order.
 &&		Entities are mandatory, but may appear
 		in any order.
-||		Entities are options; at least of them
-		must be present, and can appear in any
-		order.
+||		Entities are options; at least one of
+		them must be present, and can appear in
+		any order.
 |		Entities are exclusive options; exactly
 		one of these options must be present.
 *		Can appear zero, one or several times.
