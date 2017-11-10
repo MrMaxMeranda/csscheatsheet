@@ -898,12 +898,25 @@ GRADIENTS
 /* Gradients only work for <image> data types, not
    <color> */
 linear-gradient(<direction>, [<color-stop>]#);
-radial-gradient(shape size at position, start-color,
+radial-gradient(<shape> <length> at position, start-color,
                 ..., last-color);
 <direction>		<angle> |
 			[ to [ left | right ] ||
 			     [ top | bottom ] ]
 <color-stop>		<color> [<length-percentage>]?
+
+<position>		[ [ left | center | right |
+			    top | bottom |
+			    <length-percentage> ] |
+                          [ left | center | right |
+		            <length-percentage> ]
+			  [ top | center | bottom |  
+			    <percentage> | <length> ] |
+		          [ center | [ left | right ]
+			    [ <percentage> |
+			      <length> ]? ] &&
+			  [ center | [ top | bottom ]
+			    [ <length-percentage> ]? ] ]
 
 SELECTOR TYPES
 
