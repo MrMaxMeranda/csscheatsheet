@@ -898,8 +898,20 @@ GRADIENTS
 /* Gradients only work for <image> data types, not
    <color> */
 linear-gradient(<direction>, [<color-stop>]#);
-radial-gradient(<shape> <length> at position, start-color,
-                ..., last-color);
+radial-gradient( [ [ circle || <length> ]
+                   at <position> ,]? |
+    		 [ ellipse ||
+		   [ <length-percentage> ]{2}
+		   at <position> , ]? |
+    	 	 [ [ [ circle | ellipse ] ||
+		     <extent-keyword> ]
+		   [ at <position> , ]? |
+		   at <position> , ]?
+		 <color-stop> [ , <color-stop> ]+
+)
+<extent-keyword> = closest-corner | closest-side |
+farthest-corner | farthest-side
+<color-stop> = <color> [ <percentage> | <length> ]? 
 <direction>		<angle> |
 			[ to [ left | right ] ||
 			     [ top | bottom ] ]
