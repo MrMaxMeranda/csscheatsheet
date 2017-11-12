@@ -897,7 +897,8 @@ url(http://google.com)
 GRADIENTS
 /* Gradients only work for <image> data types, not
    <color> */
-linear-gradient(<direction>, [<color-stop>]#);
+linear-gradient([ <angle> | to <side-or-corner> ,]?
+		<color-stop> [, <color-stop>]+ );
 radial-gradient( [ [ circle || <length> ]
                    at <position> ,]? |
     		 [ ellipse ||
@@ -909,9 +910,9 @@ radial-gradient( [ [ circle || <length> ]
 		   at <position> , ]?
 		 <color-stop> [ , <color-stop> ]+
 )
-<extent-keyword> = closest-corner | closest-side |
-farthest-corner | farthest-side
-<color-stop> = <color> [ <percentage> | <length> ]? 
+<side-or-corner>   	[left | right] || [top | bottom]
+<extent-keyword>   	closest-corner | closest-side |
+		   	farthest-corner | farthest-side
 <direction>		<angle> |
 			[ to [ left | right ] ||
 			     [ top | bottom ] ]
