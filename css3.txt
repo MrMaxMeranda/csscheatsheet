@@ -40,11 +40,10 @@ background-position     [ [ left | center | right |
 			  [ center | [ top | bottom ]
 			    <length-percentage>? ] ]#
 background-repeat       repeat-x | repeat-y |
-			[repeat | space | round |
+			[ repeat | space | round |
 			  no-repeat]{1,2}
-background-size         [<length-percentage> |
-			         auto ]{1,2} |
-			cover | contain
+background-size         [ <length-percentage> |
+			  auto ]{1,2} | cover | contain
 
 BORDER
 
