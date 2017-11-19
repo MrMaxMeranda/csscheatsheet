@@ -67,15 +67,16 @@ border-image            <image> ||
 border-image-slice	<number-percent>{1,4} && fill
 			/* 1 Value: 4 corners
 			   2 Value: vert and horiz
-			   4 Value: top right bottom left
-			   fill: can be between any value */
+			   4 Value: top right bottom
+			            left
+			   fill:    can be between any
+			            value */
 border-image-source	<image>
-border-image-repeat	[stretch | repeat | round |
-			 space]{1,2}
-border-image-width	[<length-percentage> |
-			 <number> |
-			 <auto>]{1,4}
-border-image-outset	[<length> | <number>{1,4}
+border-image-repeat	[ stretch | repeat | round |
+			  space]{1,2}
+border-image-width	[ <length-percentage> |
+			  <number> | <auto> ]{1,4}
+border-image-outset	[ <length> | <number> ]{1,4}
 border-left             <border-left-width>
                         <border-style>
                         <border-color>
