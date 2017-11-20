@@ -318,12 +318,13 @@ text-indent             <length-percentage> &&
 			hanging && each-line
 text-justify            none | auto | inter-word |
 			inter-character
-text-shadow             none | [ <length>{2,3} && <color>?]
+text-shadow             none | [ <length>{2,3} &&
+			         <color> ?]
 			/* Values 1: Offset-X
 				     Offset-Y
 				     Blur-Radius */
-text-transform          none | capitalize | uppercase
-                        | lowercase | full-width
+text-transform          none | capitalize | uppercase |
+			lowercase | full-width
 unicode-bidi            normal | embed | bidi-override |
 			isolate | isolate-override |
 			plaintext
@@ -360,7 +361,8 @@ column-rule             <column-rule-width> ||
 column-rule-color       <color>
 column-rule-style       <border-style>
 column-rule-width       <border-width>
-columns                 <column-width> || <column-count>
+columns                 <column-width> ||
+			<column-count>
 column-span             none | all
 column-width            auto | <length>
 
@@ -377,8 +379,8 @@ list-style              <list-style-type> ||
                         <list-style-position>
 list-style-image        none | <url>
 list-style-position     inside | outside
-list-style-type         none |<string> | symbols()
-			/* <string> examples:
+list-style-type         none | <string> | symbols()
+			/* <string>:
 				circle | decimal |
 				lower-roman |
 				upper-roman |
@@ -386,11 +388,11 @@ list-style-type         none |<string> | symbols()
 				upper-alpha |
 				lower-greek |
 				lower-latin */
-			/* symbols() example:
-			   list-style-sype:
+			/* symbols():
+			   list-style-type:
 			    symbols(cyclic
 			            "*" "†" "‡");*/
-			/* Types:
+			/* types:
 				cyclic, numeric,
 				alphabet, symbolic,
 				fixed */
