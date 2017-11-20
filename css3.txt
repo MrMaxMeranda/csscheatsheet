@@ -90,11 +90,11 @@ border-right            <border-right-width>
 border-right-color      <color>
 border-right-style      <border-style>
 border-right-width      <border-width>
-border-top              border-top-width
-                        border-style
-                        border-color
-border-top-color        border-color
-border-top-style        border-style
+border-top              <border-top-width>
+                        <border-style>
+                        <border-color>
+border-top-color        <border-color>
+border-top-style        <border-style>
 border-top-width        <border-width>
 border-width            <length> | thin | medium | thick
 border-radius           <length-percentage>{1,4}
@@ -102,8 +102,9 @@ border-top-right-radius <length-percentage>
 border-bottom-right-radius <length-percentage>
 border-bottom-left-radius <length-percentage>
 border-top-left-radius  <length-percentage>
-box-shadow              none | [ inset? && <length>{2,4} &&
-				 <color>?]
+box-shadow              none | [ inset? &&
+			         <length>{2,4} &&
+				 <color>? ]
 			/* Value 1: offset-x
 			   Value 2: offset-y
 			   Value 3: blur radius
@@ -114,18 +115,18 @@ border-style            none | hidden | dotted |
                         outset
 FONT
 
-font                    [[<font-style> ||
-                          [ normal | small-caps ] ||
-                            <font-weight> ||
-			    <font-stretch>]?
+font                    [ [ <font-style> ||
+                            [ normal | small-caps ] ||
+                              <font-weight> ||
+			      <font-stretch> ]?
                           <font-size> [/<line-height>]?
                           <font-family>] |
                         caption | icon | menu |
                         message-box | small-caption |
 			status-bar
-font-family             [[<string> | <custom-ident>+] |
-			 serif | sans-serif | cursive |
-			 fantasy | monospace]#
+font-family             [ [ <string> | <custom-ident>+] |
+			  serif | sans-serif | cursive |
+			  fantasy | monospace ]#
 font-size               larger | smaller |
 			xx-small | x-small | small |
                         medium | large | x-large |
@@ -150,9 +151,12 @@ font-variant            normal | none |
 			  ornaments( <custom-ident> ) ||
 			  annotation( <custom-ident> ) ||
 			  <font-variant-caps> ||
-			  [ lining-nums | oldstyle-nums ] ||
-			  [ proportional-nums | tabular-nums ] ||
-			  [ diagonal-fractions | stacked-fractions ] ||
+			  [ lining-nums |
+			    oldstyle-nums ] ||
+			  [ proportional-nums |
+			    tabular-nums ] ||
+			  [ diagonal-fractions |
+			    stacked-fractions ] ||
 			  ordinal || slashed-zero ||
 			  <font-variant-east-asia>
 			<font-variant-ligatures> ||
@@ -891,6 +895,21 @@ rgb(255, 0, 153, 1)
 rgb(255, 0, 153, 100%)
 rgb(255 0 153 / 1)
 rgb(255 0 153 / 100%)
+
+<custom-ident>
+Denotes an arbitrary user-defined string used as an
+identifier.
+
+*	any alphabetical character (A to Z, or a to z),
+*	any decimal digit (0 to 9),
+*	a hyphen (-),
+*	an underscore (_),
+*	an escaped character (preceded by a backslash,
+	\),
+*	a Unicode character (in the format of a
+	backslash, \, followed by one to six
+	hexadecimal digits, representing its Unicode
+	code point)
 
 <image> TYPES:
 url('http://google.com')
