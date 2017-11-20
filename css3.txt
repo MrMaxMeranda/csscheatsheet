@@ -469,27 +469,36 @@ perspective-origin      left | center | right | top |
 transform               none |
 			[ matrix( <number>
 			  [, <number> ]{5,5} ) ||
-			  translate( <length-percentage> ||
-			          [, <length-percentage> ]? ) ||
-			  translateX( <length-percentage> ) ||
-			  translateY( <length-percentage> ) ||
-			  scale( <number> [, <number> ]? ) ||
+			  translate(
+			   <length-percentage> ||
+			   [, <length-percentage> ]? ) ||
+			  translateX(
+			    <length-percentage> ) ||
+			  translateY(
+			    <length-percentage> ) ||
+			  scale( <number>
+			         [, <number> ]? ) ||
 			  scaleX( <number> ) ||
 			  scaleY( <number> ) ||
 			  rotate( <angle> ) ||
-			  skew( <angle> [, <angle> ]? ) ||
+			  skew( <angle>
+			        [, <angle> ]? ) ||
 			  skewX( <angle> ) ||
 			  skewY( <angle> ) ||
-			  matrix3d( <number> [, <number> ]
-			            {15,15} ) ||
-			  translate3d( <length-percentage>,
-			   <length-percentage> , <length> ) ||
+			  matrix3d( <number>
+			          [, <number> ]{15,15}
+				  ) ||
+			  translate3d(
+			   <length-percentage>,
+			   <length-percentage> ,
+			   <length> ) ||
 			  translateZ( <length> ) ||
 			  scale3d( <number> , <number> ,
 			           <number> ) ||
 			  scaleZ( <number> ) ||
-			  rotate3d( <number> , <number> ,
-			            <number> , <angle> ) ||
+			  rotate3d( <number>, <number>,
+			            <number>, <angle>
+				    ) ||
 			  rotateX( <angle> ) ||
 			  rotateY( <angle> ) ||
 			  rotateZ( <angle> ) ||
