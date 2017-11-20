@@ -443,8 +443,8 @@ transition-timing-function [ linear |
 					  <number>,
 					  <number>) |
 			     step-start | step-end |
-			     steps(<integer>[, [start |
-			     			end]]?) |
+			     steps(<integer>[,
+			       [ start | end ] ]?) |
 			     frames(<integer>)]
 OUTLINE
 
@@ -453,9 +453,9 @@ outline*		<outline-width> ||
 			<outline-color>
 outline-color           <color> | invert
 outline-offset          <length>
-outline-style           none | auto | dotted | dashed |
-                        solid | double | groove |
-                        ridge | inset | outset
+outline-style           none | auto | dotted |
+			dashed | solid | double |
+			groove | ridge | inset | outset
 outline-width           thin | medium | thick | <length>
 
 3D / 2D TRANSFORM
@@ -468,7 +468,7 @@ perspective-origin      left | center | right | top |
 			<length>
 transform               none |
 			[ matrix( <number>
-			     [, <number> ]{5,5} ) ||
+			  [, <number> ]{5,5} ) ||
 			  translate( <length-percentage> ||
 			          [, <length-percentage> ]? ) ||
 			  translateX( <length-percentage> ) ||
