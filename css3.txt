@@ -463,9 +463,9 @@ outline-width           thin | medium | thick | <length>
 backface-visibility     visible | hidden
 perspective             none | <length>
 perspective-origin      left | center | right | top |
-			bottom | <percent> <length>
-			center | top | bottom | <percent>
-			<length>
+			bottom | <length-percentage>
+			center | top | bottom |
+			<length-percentage>
 transform               none |
 			[ matrix( <number>
 			  [, <number> ]{5,5} ) ||
@@ -509,13 +509,15 @@ transform-origin        [ [ [ <percentage> |
                         right ] [ <percentage> |
                         <length> | top | center |
                         bottom ]? ] <length> ] |
-                        [ [ [ left | center | right ] ||
+                        [ [ [ left | center |
+			      right ] ||
                         [ top | center | bottom ] ]
                         <length> ]
 			[ <length-percentage> | left |
-			  center | right | top | bottom ] |
-			[ [ <length-percentage> | left |
-			    center | right ]
+			  center | right | top |
+			  bottom ] |
+			[ [ <length-percentage> |
+			    left | center | right ]
 			[ <length-percentage> | top |
 			   center | bottom ] ] <length>?
 transform-style         flat | preserve-3d
@@ -535,6 +537,7 @@ counter-reset           none |
 hyphens                 none | manual | auto
 quotes                  none |
                         [ <string> <string> ]+
+
 /* attr() notes: */
 attr()		attr( <attr-name>
 		      [ string | integer | color |
@@ -553,7 +556,8 @@ attr()		attr( <attr-name>
 	       contains an invalid value. If not set,
 	       CSS will use the default value defined
 	       for each <type-or-unit>. */
-/* Please note: 'can' be used with other properties */
+/* Please note: attr() 'can' be used with other
+                properties besides <content> */
 
 LINE BOX
 
