@@ -563,9 +563,9 @@ LINE BOX
 
 line-height             normal | <number> |
 			<length-percentage>
-vertical-align          baseline | sub | super | top
-                        | text-top | middle | bottom
-                        | text-bottom |
+vertical-align          baseline | sub | super | top |
+			text-top | middle | bottom |
+			text-bottom |
 			<length-percentage>
 
 POSITIONING
@@ -583,7 +583,7 @@ PAGED MEDIA
 image-orientation       from-image | <angle> |
 			[<angle>? flip]
 			/* from-image uses EXIF data
-			   contined in the image */
+			   contained in the image */
 orphans                 <integer>
 page-break-after        auto | always | avoid | left |
                         right
@@ -594,23 +594,23 @@ windows                 <integer>
 
 UI
 
-cursor                  [[ <url> [ <x> <y> ]? , ]*
-			 [ auto | default | none |
-			   context-menu | help |
-			   pointer | progress | wait |
-			   cell | crosshair | text |
-			   vertical-text | alias |
-			   copy | move | no-drop |
-			   not-allowed | e-resize |
-			   n-resize | ne-resize |
-			   nw-resize | s-resize |
-			   se-resize | sw-resize |
-			   w-resize | ew-resize |
-			   ns-resize | nesw-resize |
-			   nwse-resize | col-resize |
-			   row-resize | all-scroll |
-			   zoom-in | zoom-out | grab |
-			   grabbing ]]
+cursor                  [ [ <url> [ <x> <y> ]? , ]*
+			  [ auto | default | none |
+			    context-menu | help |
+			    pointer | progress | wait |
+			    cell | crosshair | text |
+			    vertical-text | alias |
+			    copy | move | no-drop |
+			    not-allowed | e-resize |
+			    n-resize | ne-resize |
+			    nw-resize | s-resize |
+			    se-resize | sw-resize |
+			    w-resize | ew-resize |
+			    ns-resize | nesw-resize |
+			    nwse-resize | col-resize |
+			    row-resize | all-scroll |
+			    zoom-in | zoom-out | grab |
+			    grabbing ] ]
 resize                  none | both | horizontal |
                         vertical
 
@@ -878,12 +878,12 @@ s                       seconds
 
 <color>
 
-transparent
+transparent		transparent color value
 currentColor            computed value of the
                         'currentColor' keyword is the
                         computed value of the 'color'
                         property
-<color name>            red; blue; green; dark green
+<color name>            red, blue, green, yellow, etc.
 rgb(r,g,b[,a])          red = rgb(255,0,0[,0])
 rgb(r%,g%,b%[,a%])      red = rgb(100%,0%,0%[,0%])
 #rrggbb                 red = #ff0000[00]
@@ -929,16 +929,15 @@ rgb(255 0 153 / 100%)
 Denotes an arbitrary user-defined string used as an
 identifier.
 
-*	any alphabetical character (A to Z, or a to z),
-*	any decimal digit (0 to 9),
-*	a hyphen (-),
-*	an underscore (_),
-*	an escaped character (preceded by a backslash,
-	\),
-*	a Unicode character (in the format of a
-	backslash, \, followed by one to six
-	hexadecimal digits, representing its Unicode
-	code point)
+ * any alphabetical character (A to Z, or a to z),
+ * any decimal digit (0 to 9),
+ * a hyphen (-),
+ * an underscore (_),
+ * an escaped character (preceded by a backslash,
+   \),
+ * a Unicode character (in the format of a backslash,
+   \, followed by one to six hexadecimal digits,
+   representing its Unicode code point)
 
 <image> TYPES:
 url('http://google.com')
@@ -947,7 +946,7 @@ url(http://google.com)
 
 GRADIENTS
 /* Gradients only work for <image> data types, not
-   <color> */
+   <color>, etc. */
 linear-gradient([ <angle> | to <side-or-corner> ,]?
 		<color-stop> [, <color-stop>]+ );
 radial-gradient( [ [ circle || <length> ]
@@ -959,15 +958,14 @@ radial-gradient( [ [ circle || <length> ]
 		     <extent-keyword> ]
 		   [ at <position> , ]? |
 		   at <position> , ]?
-		 <color-stop> [ , <color-stop> ]+
-)
+		 <color-stop> [ , <color-stop> ]+ )
 <side-or-corner>   	[left | right] || [top | bottom]
 <extent-keyword>   	closest-corner | closest-side |
 		   	farthest-corner | farthest-side
 <direction>		<angle> |
 			[ to [ left | right ] ||
 			     [ top | bottom ] ]
-<color-stop>		<color> [<length-percentage>]?
+<color-stop>		<color> [ <length-percentage> ]?
 
 <position>		[ [ left | center | right |
 			    top | bottom |
