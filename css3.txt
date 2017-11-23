@@ -47,11 +47,11 @@ background-size         [ <length-percentage> |
 
 BORDER
 
-border            	<border-width>
-                        <border-style>
+border            	<border-width> ||
+                        <border-style> ||
                         <color>
-border-bottom           <border-bottom-width>
-                        <border-style>
+border-bottom           <border-bottom-width> ||
+                        <border-style> ||
                         <color>
 border-bottom-color     <color>
 border-bottom-style     <border-style>
