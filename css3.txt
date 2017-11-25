@@ -50,7 +50,7 @@ BORDER
 border            	<border-width> ||
                         <border-style> ||
                         <color>
-border-bottom           <border-bottom-width> ||
+border-bottom           <border-width> ||
                         <border-style> ||
                         <color>
 border-bottom-color     <color>
@@ -59,11 +59,11 @@ border-bottom-width     <border-width>
 border-collapse         collapse | separate
 border-color            <color>
 border-image            <image> ||
-			<border-image-slice> [ /|
-			  <border-image-width> /|
-			  <border-image-outset>]? ||
+			<border-image-slice>
+			[ / <border-image-width> |
+			  / <border-image-width>? 
+			  <border-image-outset> ]? ||
 			<border-image-repeat>
-                        none
 border-image-slice	<number-percent>{1,4} && fill
 			/* 1 Value: 4 corners
 			   2 Value: vert and horiz
