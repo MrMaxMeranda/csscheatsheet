@@ -76,25 +76,24 @@ border-image-source	<image>
 border-image-repeat	[ stretch | repeat | round |
 			  space]{1,2}
 border-image-width	[ <length-percentage> |
-			  <number> | <auto> ]{1,4}
+			  <number> | auto ]{1,4}
 border-image-outset	[ <length> | <number> ]{1,4}
-border-left             <border-left-width> ||
+border-left             <border-width> ||
                         <border-style> ||
-                        <border-color>
+                        <color>
 border-left-color       <color>
 border-left-style       <border-style>
 border-left-width       <border-width>
-                        <length>
-border-right            <border-right-width> ||
+border-right            <border-width> ||
                         <border-style> ||
-                        <border-color>
+                        <color>
 border-right-color      <color>
 border-right-style      <border-style>
 border-right-width      <border-width>
-border-top              <border-top-width> ||
+border-top              <border-width> ||
                         <border-style> ||
-                        <border-color>
-border-top-color        <border-color>
+                        <color>
+border-top-color        <color>
 border-top-style        <border-style>
 border-top-width        <border-width>
 border-width            <length> | thin | medium | thick
