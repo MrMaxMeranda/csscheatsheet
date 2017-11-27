@@ -203,7 +203,7 @@ display	 /* outside */  block | inline | run-in |
 			ruby-base | ruby-text |
 			ruby-base-container |
 			ruby-text-container |
-             /* box */  contents | none
+             /* box */  contents | none |
           /* legacy */  inline-block | inline-table |
 			inline-flex | inline-grid
 float                   left | right | none |
@@ -279,11 +279,10 @@ text-decoration-color	<color>
 text-decoration-style	solid | double | dotted |
 			dashed | wavy
 text-emphasis           <text-emphasis-style> ||
-			<text-emphasis-color>
+			<color>
 text-emphasis-position	[over | under] &&
 			[right | left]
 text-emphases-color	<color>
-			transparent
 text-emphasis-style	none | [ [ filled | open ] ||
 			[ dot | circle | double-circle |
 			  triangle | sesame ] ] |
