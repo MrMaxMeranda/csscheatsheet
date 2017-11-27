@@ -283,10 +283,10 @@ text-emphasis           <text-emphasis-style> ||
 text-emphasis-position	[over | under] &&
 			[right | left]
 text-emphases-color	<color>
-text-emphasis-style	none | [ [ filled | open ] ||
-			[ dot | circle | double-circle |
-			  triangle | sesame ] ] |
-			<string>
+text-emphasis-style	[ [ filled | open ] ||
+			  [ dot | circle | double-circle |
+			    triangle | sesame ] ] |
+			<string> | none 
 text-indent             <length-percentage> &&
 			hanging && each-line
 text-justify            none | auto | inter-word |
