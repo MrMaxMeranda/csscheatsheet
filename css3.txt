@@ -117,10 +117,10 @@ FONT
 
 font                    [ [ <font-style> ||
                             [ normal | small-caps ] ||
-                              <font-weight> ||
-			      <font-stretch> ]?
+                            <font-weight> ||
+			    <font-stretch> ]?
                           <font-size> [/<line-height>]?
-                          <font-family>] |
+                          <font-family> ] |
                         caption | icon | menu |
                         message-box | small-caption |
 			status-bar
