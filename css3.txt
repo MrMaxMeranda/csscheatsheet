@@ -292,10 +292,10 @@ text-indent             <length-percentage> &&
 text-justify            none | auto | inter-word |
 			inter-character
 text-shadow             none | [ <length>{2,3} &&
-			         <color> ?]
+			         <color>? ]
 			/* Values 1: Offset-X
-				     Offset-Y
-				     Blur-Radius */
+				  2: Offset-Y
+				  3: Blur-Radius */
 text-transform          none | capitalize | uppercase |
 			lowercase | full-width
 unicode-bidi            normal | embed | bidi-override |
@@ -311,8 +311,8 @@ TABLE
 
 border-collapse         collapse | separate
 border-spacing          <length> <length>?
-			/* 1 value: horiz-vert
-			   2 value: <horiz> <vert> */
+			/* 1 value:  horiz-vert
+			   2 values: horiz, vert */
 caption-side            top | bottom | block-start |
 			block-end | inline-start |
 			inline-end
