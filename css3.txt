@@ -330,7 +330,7 @@ column-fill             auto | balance | balance-all
 column-gap              normal | <length-percentage>
 column-rule             <column-rule-width> ||
 			<column-rule-style> ||
-			<column-rule-color>
+			<color>
 column-rule-color       <color>
 column-rule-style       <border-style>
 column-rule-width       <border-width>
