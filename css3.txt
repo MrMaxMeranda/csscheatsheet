@@ -339,12 +339,12 @@ columns                 <column-width> ||
 column-span             none | all
 column-width            auto | <length>
 
-COLOR
+COLOUR
 
 color                   <color>
 opacity                 <number> /* 0 to 1 */
 
-LIST & MARKERS
+LISTS & MARKERS
 
 list-style              <list-style-type> ||
 			<list-style-image> ||
