@@ -342,8 +342,7 @@ column-width            auto | <length>
 COLOR
 
 color                   <color>
-opacity                 <number>
-			/* 0 to 1 */
+opacity                 <number> /* 0 to 1 */
 
 LIST & MARKERS
 
@@ -859,14 +858,14 @@ currentColor            computed value of the
 <color name>            red, blue, green, yellow, etc.
 rgb(r,g,b[,a])          red = rgb(255,0,0[,0])
 rgb(r%,g%,b%[,a%])      red = rgb(100%,0%,0%[,0%])
-#rrggbb                 red = #ff0000[00]
-#rgb			red = #f00[0]
-hsl(H,S%,L%[,a])        red = hsl(0, 100%, 50%[,0])
+#rrggbb[aa]             red = #ff0000[00]
+#rgb[a]			red = #f00[0]
+hsl(h,s%,l%[,a])        red = hsl(0, 100%, 50%[,0])
 			/* hue = <angle>
 			   (default = degrees)
-			   Saturation = percentage
-			   Lightness = percentage
-			   Alpha = 0 to 1 */
+			   saturation = percentage
+			   lightness = percentage
+			   alpha = 0 to 1 or percentage */
 
 /* These examples all specify the same color: hot pink. */
 
@@ -883,7 +882,7 @@ rgb(255, 0, 153.0) /* ERROR! Don't use fractions. */
 rgb(100%,0%,60%)
 rgb(100%, 0%, 60%)
 rgb(100%, 0, 60%) /* ERROR! Don't mix integers and
-percentages. */
+                            percentages. */
 rgb(255 0 153)
 
 /* Hexadecimal syntax with alpha value */
