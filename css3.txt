@@ -433,17 +433,11 @@ outline-width           thin | medium | thick | <length>
 
 backface-visibility     visible | hidden
 perspective             none | <length>
-perspective-origin     	[ left | center | right |
+perspective-origin      [ left | center | right |
 			  top | bottom |
-			  <length-percentage> ] |
-			  [ left | center | right |
-			    <length-percentage> ]
-			  [ top | center | bottom |
-			    <length-percentage> ] |
-			  [ center | [ left | right ]
-			    <length-percentage>? ] &&
-			  [ center | [ top | bottom ]
-			    <length-percentage>? ]
+			  <length-percentage> ] &&
+			[ center | top | bottom |
+			  <length-percentage> ]
 transform               none |
 			[ matrix( <number>
 			  [, <number> ]{5,5} ) ||
@@ -464,11 +458,10 @@ transform               none |
 			  skewX( <angle> ) ||
 			  skewY( <angle> ) ||
 			  matrix3d( <number>
-			          [, <number> ]{15,15}
-				  ) ||
+			          [, <number> ]{15,15}) ||
 			  translate3d(
 			   <length-percentage>,
-			   <length-percentage> ,
+			   <length-percentage>,
 			   <length> ) ||
 			  translateZ( <length> ) ||
 			  scale3d( <number> , <number> ,
