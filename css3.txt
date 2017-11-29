@@ -464,7 +464,7 @@ transform               none |
 			   <length-percentage>,
 			   <length> ) ||
 			  translateZ( <length> ) ||
-			  scale3d( <number> , <number> ,
+			  scale3d( <number> , <number>,
 			           <number> ) ||
 			  scaleZ( <number> ) ||
 			  rotate3d( <number>, <number>,
@@ -474,23 +474,14 @@ transform               none |
 			  rotateY( <angle> ) ||
 			  rotateZ( <angle> ) ||
 			  perspective( <length> )]+
-
-transform-origin        [ [ [ <percentage> |
-                        <length> | left | center |
-                        right ] [ <percentage> |
-                        <length> | top | center |
-                        bottom ]? ] <length> ] |
-                        [ [ [ left | center |
-			      right ] ||
-                        [ top | center | bottom ] ]
-                        <length> ]
-			[ <length-percentage> | left |
+transform-origin        [ <length-percentage> | left |
 			  center | right | top |
 			  bottom ] |
 			[ [ <length-percentage> |
-			    left | center | right ]
-			[ <length-percentage> | top |
-			   center | bottom ] ] <length>?
+			    left | center | right ] &&
+			  [ <length-percentage> | top |
+			    center | bottom ] ]
+			<length>?
 transform-style         flat | preserve-3d
 
 GENERATED CONTENT
