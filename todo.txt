@@ -1,5 +1,5 @@
 Things to do:
 
-Make an <integer> entry
-Make an <url> entry
-Make a <number> entry
+Make an <integer> entry in units
+Make an <url> entry in units
+Make a <number> entry in units
