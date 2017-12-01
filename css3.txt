@@ -572,6 +572,8 @@ cursor                  [ <url> [ <x> <y> ]? , ]*
 			  row-resize | all-scroll |
 			  zoom-in | zoom-out | grab |
 			  grabbing ]
+			/* <x> and <y>
+			   x and y coordinates */
 resize                  none | both | horizontal |
                         vertical
 
