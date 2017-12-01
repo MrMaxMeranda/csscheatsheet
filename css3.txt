@@ -604,7 +604,7 @@ PSEUDO-CLASS
 			be activated (selected, clicked
 			on, typed into, etc.) or accept
 			focus.
-:first			used with the  @page at-rule,
+:first			used with the @page at-rule,
 			represents the first page of a
 			printed document.
 :first-child            represents the first element
@@ -627,10 +627,9 @@ PSEUDO-CLASS
 :invalid		represents any <input> or other
 			<form> element whose contents
 			fail to validate.
-:lang(<lang>)           Allows the author to specify a
-			language to use in a specified
-			element an element that is the
-			n-th sibling
+:lang(<lang>)           matches elements based on the
+			language they are determined to
+			be in.
 :last-child             represents the last element
 			among a group of sibling
 			elements.
