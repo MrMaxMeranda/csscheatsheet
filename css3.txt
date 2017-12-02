@@ -655,7 +655,7 @@ PSEUDO-CLASS
 :only-child             an element that is the only
 			child.
 :only-of-type           an element that is the only
-			child of that type
+			child of that type.
 :optional		represents any <input>,
 			<select>, or <textarea> element
 			that does not have the required
