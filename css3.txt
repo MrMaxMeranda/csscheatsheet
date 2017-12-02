@@ -713,16 +713,14 @@ PSEUDO-CLASS
 	       #foo:not(#bar) will match the same
 	       element as the simpler #foo, but has a
 	       higher specificity.
-	     * :not(.foo) will match
-	       anything that isn't .foo, including
-	       <html> and <body>.
-	     * This selector only applies to
-	       one element; you cannot use it to
-	       exclude all ancestors. For instance,
-	       body :not(table) a will still apply to
-	       links inside of a table, since <tr> will
-	       match with the :not() part of the
-	       selector.
+	     * :not(.foo) will match anything that
+	       isn't .foo, including <html> and <body>.
+	     * This selector only applies to one
+	       element; you cannot use it to exclude
+	       all ancestors. For instance, body
+	       :not(table) a will still apply to links
+	       inside of a table, since <tr> will match
+	       with the :not() part of the selector.
 <nth>	     <an-plus-b> | even | odd
 	     /* Examples */
 	     tr:nth-child(odd) or tr:nth-child(2n+1)
