@@ -704,24 +704,27 @@ PSEUDO-CLASS
 
 /* Variable definition notes: */
 <selector>   * Useless selectors can be written using
-	       this pseudo-class. For example, :not(*)
+	       this pseudo-class. For example,
+	       ':not(*)'
 	       matches any element which is not an
 	       element, so the rule will never be
 	       applied.
 	     * This pseudo-class can increase the
 	       specificity of a rule. For example,
-	       #foo:not(#bar) will match the same
-	       element as the simpler #foo, but has a
-	       higher specificity.
-	     * :not(.foo) will match anything that
+	       '#foo:not(#bar)'
+	       will match the same element as the
+	       simpler #foo, but has a higher
+	       specificity.
+	     * ':not(.foo)' will match anything that
 	       isn't .foo, including <html> and <body>.
 	     * This selector only applies to one
 	       element; you cannot use it to exclude
-	       all ancestors. For instance, body
-	       :not(table) a will still apply to links
-	       inside of a table, since <tr> will match
-	       with the :not() part of the selector.
-<nth>	     <an-plus-b> | even | odd
+	       all ancestors. For instance,
+	       'body :not(table) a'
+	       will still apply to links inside of a
+	       table, since <tr> will match with the
+	       :not() part of the selector.
+<nth>	     <An-plus-B> | even | odd
 	     /* Examples */
 	     tr:nth-child(odd) or tr:nth-child(2n+1)
 		 Represents the odd rows of an HTML
@@ -751,11 +754,11 @@ PSEUDO-CLASS
 PSEUDO-ELEMENT
 
 ::after                 Inserts some content after an
-                        element
+                        element.
 ::before                Inserts some content before
-                        an element
+                        an element.
 ::cue			Matches WebVTT cues within a
-			selected element
+			selected element.
 ::first-letter          applies styles to the first
 			letter of the first line of a
 			block-level element, but only
