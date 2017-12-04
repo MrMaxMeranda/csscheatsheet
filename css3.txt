@@ -795,7 +795,7 @@ UNITS
 
 ABSOLUTE <length> UNITS
 
-px			Traditionally one device pixel.
+px			traditionally one device pixel.
 mm                      millimeter
 cm                      centimeter
 in                      inch (2.54 cm)
@@ -819,11 +819,11 @@ rem                     the font size of the root element
 
 VIEWPORT PERCENTAGE LENGTHS
 
-vh                      The viewport's height
-vw                      The viewport's width
-vmin                    Viewport's height or width,
+vh                      the viewport's height
+vw                      the viewport's width
+vmin                    viewport's height or width,
                         whichever is smaller of the two
-vmax			Viewport's height or width,
+vmax			viewport's height or width,
                         whichever is larger of the two
 
 <angle> UNITS:
