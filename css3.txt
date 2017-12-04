@@ -834,12 +834,12 @@ vmax			viewport's height or width,
 (0 to 6.2832)rad        radians
 (0 to 1)turn            turns
 
-<time>
+<time> VALUES:
 
 ms                      milli-seconds
 s                       seconds
 
-<color>
+<color> VALUES:
 
 transparent		transparent color value
 currentColor            computed value of the
