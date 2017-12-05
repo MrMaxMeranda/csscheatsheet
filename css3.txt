@@ -962,16 +962,10 @@ radial-gradient( [ [ circle || <length> ]
 			[ to [ left | right ] ||
 			     [ top | bottom ] ]
 <color-stop>		<color> [ <length-percentage> ]?
-<position>		[ [ left | center | right |
-			    top | bottom |
-			    <length-percentage> ] |
-                          [ left | center | right |
-		            <length-percentage> ]
-			  [ top | center | bottom |  
-			    <percentage> | <length> ] |
-		          [ center | [ left | right ]
-			    [ <percentage> |
-			      <length> ]? ] &&
+<position>		[ left | center | right | top |
+			  bottom | <length-percentage> ] |
+		        [ [ center | [ left | right ]
+			    [ <length-percentage> ]? ] &&
 			  [ center | [ top | bottom ]
 			    [ <length-percentage> ]? ] ]
 
