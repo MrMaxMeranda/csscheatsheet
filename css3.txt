@@ -975,16 +975,16 @@ BASIC SELECTORS:
 Type selector 		elementname
 Class selector 		.classname
 ID selector		#idname
-Universal selector	*    Matches elements of any
-			     type.
-			ns|* Matches all elements in
-			     namespace 'ns'.
-			*|*  Matches all elements.
-			|*   Matches all elements
-			     without any declared
-			     namespace.
+Universal selector	*    (Matches elements of any
+			      type.)
+			ns|* (Matches all elements in
+			      namespace 'ns'.)
+			*|*  (Matches all elements.)
+			|*   (Matches all elements
+			      without any declared
+			      namespace.)
 			
-Attribute selector:
+ATTRIBUTE SELECTOR:
 [attr]		Represents an element with an attribute
 		name of attr.
 [attr=value]	Represents an element with an attribute
