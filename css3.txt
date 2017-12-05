@@ -845,7 +845,7 @@ transparent		transparent color value
 currentColor            computed value of the
                         'currentColor' keyword is the
                         computed value of the 'color'
-                        property
+                        property.
 <color name>            red, blue, green, yellow, etc.
 rgb(r,g,b[,a])          red = rgb(255,0,0[,0])
 rgb(r%,g%,b%[,a%])      red = rgb(100%,0%,0%[,0%])
