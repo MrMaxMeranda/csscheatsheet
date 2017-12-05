@@ -954,7 +954,7 @@ radial-gradient( [ [ circle || <length> ]
 		     <extent-keyword> ]
 		   [ at <position> , ]? |
 		   at <position> , ]?
-		 <color-stop> [ , <color-stop> ]+ )
+		 <color-stop> [ , <color-stop> ]+ );
 <side-or-corner>   	[left | right] || [top | bottom]
 <extent-keyword>   	closest-corner | closest-side |
 		   	farthest-corner | farthest-side
@@ -962,7 +962,6 @@ radial-gradient( [ [ circle || <length> ]
 			[ to [ left | right ] ||
 			     [ top | bottom ] ]
 <color-stop>		<color> [ <length-percentage> ]?
-
 <position>		[ [ left | center | right |
 			    top | bottom |
 			    <length-percentage> ] |
