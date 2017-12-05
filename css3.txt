@@ -907,9 +907,9 @@ identifier.
    representing its Unicode code point.)
 
 <url> EXAMPLES:
-<css_property>: url("http://example.com/mycursor.png")
-<css_property>: url('http://example.com/mycursor.png')
-<css_property>: url(http://example.com/mycursor.png)
+<css_property>: url("http://example.com/mycursor.png");
+<css_property>: url('http://example.com/mycursor.png');
+<css_property>: url(http://example.com/mycursor.png);
 
 <integer> EXAMPLES:
 12          Positive integer (without a leading + sign)
@@ -931,13 +931,13 @@ identifier.
 -3.4e-2     Complicated scientific notation
 INVALID:
 12.         Decimal points must be followed by at least
-one digit.
+	    one digit.
 +-12.2      Only one leading +/- is allowed.
 12.1.1      Only one decimal point is allowed.
 
 <image> TYPES:
-url('http://google.com')
 url("http://google.com")
+url('http://google.com')
 url(http://google.com)
 
 GRADIENTS
