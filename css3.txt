@@ -847,16 +847,17 @@ currentColor            computed value of the
                         computed value of the 'color'
                         property.
 <color name>            red, blue, green, yellow, etc.
-rgb(r,g,b[,a])          red = rgb(255,0,0[,0])
-rgb(r%,g%,b%[,a%])      red = rgb(100%,0%,0%[,0%])
-#rrggbb[aa]             red = #ff0000[00]
-#rgb[a]			red = #f00[0]
-hsl(h,s%,l%[,a])        red = hsl(0, 100%, 50%[,0])
+rgb(r,g,b[,a])          red = rgb(255,0,0[,1])
+rgb(r%,g%,b%[,a%])      red = rgb(100%,0%,0%[,100%])
+#rrggbb[aa]             red = #ff0000[ff]
+#rgb[a]			red = #f00[f]
+hsl(h,s%,l%[,a])        red = hsl(0, 100%, 50%[,1])
 			/* hue = <angle>
-			   (default = degrees)
-			   saturation = percentage
-			   lightness = percentage
-			   alpha = 0 to 1 or percentage */
+			         (default = degrees)
+			   saturation = <percentage>
+			   lightness = <percentage>
+			   alpha = 0 to 1
+			           or <percentage> */
 
 /* These examples all specify the same color: hot pink. */
 
