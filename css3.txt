@@ -1045,37 +1045,37 @@ Descendant combinator 		A B
       matching the first selector. */
 
 SYNTAX USED IN THIS DOCUMENT
-<data>		Basic data type; defined elsewhere in
+<data>		basic data type; defined elsewhere in
 		this document.
-[ ]		Combining entities, etc. and transform
+[ ]		combining entities, etc. and transform
 		them as a single component.
-juxtaposed	Juxtaposed components are mandatory,
+juxtaposed	juxtaposed components are mandatory,
 		and should appear in the exact order.
-&&		Entities are mandatory, but may appear
+&&		entities are mandatory, but may appear
 		in any order.
-||		Entities are options; at least one of
+||		entities are options; at least one of
 		them must be present, and can appear in
 		any order.
-|		Entities are exclusive options; exactly
+|		entities are exclusive options; exactly
 		one of these options must be present.
-*		Can appear zero, one or several times.
-+		Can appear one or several times.
-?		Can appear zero or one time.
-{A,B}		Can appear at least A times and at most
-		B times.
-#		Can appear one or several times, but
+*		can appear zero, one or several times.
++		can appear one or several times.
+?		can appear zero or one time.
+{A,B}		can appear at least A times and at most
+		b times.
+#		can appear one or several times, but
 		comma separated.
-!		Can have at least one value.
+!		can have at least one value.
 
 /* All CSS properties accept the keywords INHERIT,
    INITIAL and UNSET, that are defined throughout CSS.
    They are not shown in the value definition, and are
    implicitly defined. */
-inherit		Causes the element for which it is
+inherit		causes the element for which it is
 		specified to take the computed value of
 		the property from its parent element.
 initial		applies the default value of a property
 		to an element.
-unset		Resets a property to its inherited
+unset		resets a property to its inherited
 		value if it inherits from its parent,
 		and to its initial value if not.
