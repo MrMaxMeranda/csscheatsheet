@@ -1015,7 +1015,7 @@ ATTRIBUTE SELECTOR:
 		case-insensitively (for characters
 		within the ASCII range). 
 
-COMBINATORS:
+COMBINATORS
 Adjacent sibling combinator 	A + B
    former_element + target_element { style properties }
    /* Separates two selectors and matches the second
@@ -1038,14 +1038,14 @@ Descendant combinator 		A B
    selector1 selector2 { /* property declarations */ }
 	or
    selector1 >> selector2 { /* property declarations */ }
-   /* Typically represented by a single space 
+   /* Typically represented by a single space ( )
       character — combines two selectors such that
       elements matched by the second selector are
       selected if they have an ancestor element
       matching the first selector. */
 
 SYNTAX USED IN THIS DOCUMENT
-<data>		Basic data type; define elsewhere in
+<data>		Basic data type; defined elsewhere in
 		this document.
 [ ]		Combining entities, etc. and transform
 		them as a single component.
