@@ -1,9 +1,7 @@
 # csscheatsheet
 CSS Cheat Sheet
 
-*Please note: This is a work in progress.* I am currently working on this document about 5 hours per week, and hope to eventually have a good cheat sheet available for anyone that is in need of one. At the moment, it is incomplete.
-
-This reference is formatted in a way that I can write it (with real pencil) into my A5 textbook.
+This reference is formatted in a way that I can write it (with a real pencil) into my A5 textbook.
 
 When this list is complete, I will be able to do many things with it. It currently has a line width of 55 characters, but even this won't be a problem once it is complete as carriage returns and whitespace are nothing more than mere details in my editor. 
 
